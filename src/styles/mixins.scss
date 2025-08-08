@@ -1,0 +1,42 @@
+// ===== RESPONSIVE BREAKPOINTS =====
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+
+// ===== RESPONSIVE MIXINS =====
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// ===== UTILITY MIXINS =====
+@mixin container {
+    max-width: 120rem; // 1200px
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin touch-target {
+    min-height: 4.4rem;
+    min-width: 4.4rem;
+}

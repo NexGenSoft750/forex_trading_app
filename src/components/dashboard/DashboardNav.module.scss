@@ -1,0 +1,97 @@
+@import "../../styles/mixins.scss";
+
+.dashboard-nav {
+    font-size: 1.6rem;
+
+    @include tablet {
+        font-size: 1.4rem;
+    }
+
+    @include mobile {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .dashboard-nav__container {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .dashboard-nav__item {
+            color: #999999;
+            margin-top: 3.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem; // 20px converted to rem
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+
+            @include tablet {
+                margin-top: 0;
+                gap: 1.5rem;
+                padding: 0.8rem 1.2rem;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 0.5rem;
+            }
+
+            @include mobile {
+                margin-top: 0;
+                gap: 0; // Remove gap for mobile
+                padding: 1rem;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 0.4rem;
+                font-size: 1.2rem;
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .dashboard-nav__link {
+                color: #999999;
+                transition: color 0.2s ease-in-out;
+
+                @include tablet {
+                    white-space: nowrap;
+                }
+
+                @include mobile {
+                    white-space: nowrap;
+                    width: 100%;
+                }
+
+                &:hover {
+                    color: white !important;
+                }
+            }
+
+            &:hover {
+                color: white !important;
+
+                @include tablet {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+
+                @include mobile {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            // Hide arrows on mobile
+            @include mobile {
+                svg {
+                    display: none;
+                }
+            }
+        }
+    }
+}

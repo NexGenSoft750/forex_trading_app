@@ -1,0 +1,172 @@
+@import '@/styles/mixins.scss';
+
+.header {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(1.8rem, 1vw, 3rem) clamp(1rem, 2vw, 3rem);
+    gap: 4rem;
+    background-color: #F1F1F1;
+
+    @include tablet {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+
+    @include mobile {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .header__heading {
+        color: #5D5FEF;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+        @include mobile {
+            font-size: 1.8rem;
+        }
+    }
+
+    .header__actions {
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+        gap: 100px;
+
+        @media screen and (max-width: 1200px) {
+            gap: 70px;
+        }
+
+        .header__user_info {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+
+            @include tablet {
+                gap: 2rem;
+            }
+
+            @include mobile {
+                gap: 1.5rem;
+            }
+
+            .header__notification {
+                border-radius: 0.8rem;
+                background-color: #FFFAF1;
+                width: 3.7rem;
+                height: 3.7rem;
+                position: relative;
+                cursor: pointer;
+
+                @include mobile {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
+
+                .header__notification_img {
+                    position: absolute;
+                    width: 45%;
+                    height: 45%;
+                    inset: 0;
+                    margin: auto;
+                }
+
+                .header__notification__indicator {
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: 50%;
+                    background-color: #EB5757;
+                }
+            }
+
+            .header__profile_navigation {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                cursor: pointer;
+
+                @include mobile {
+                    gap: 1rem;
+                }
+
+                .header__profile_img_wrapper {
+                    position: relative;
+                    width: 4.5rem;
+                    height: 4.5rem;
+
+                    @include mobile {
+                        width: 4rem;
+                        height: 4rem;
+                    }
+
+                    .header__profile_img {
+                        border-radius: 0.5rem;
+                    }
+                }
+
+                .header__profile_info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+
+                    @include mobile {
+                        gap: 0.2rem;
+                    }
+
+                    span {
+                        display: block;
+                    }
+
+                    .header__user_name {
+                        color: #5D5FEF;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        line-height: 2rem;
+
+                        @include mobile {
+                            font-size: 1.3rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+
+                    .header__user_role {
+                        color: #737791;
+                        font-size: 1.2rem;
+
+                        @include mobile {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
+                .down_arrow {
+                    position: relative;
+                    left: 5%;
+                    color: #5D5FEF;
+
+                    @include mobile {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header--bg-light {
+    background-color: #F1F1F1;
+}
+
+.text-primary {
+    color: #5D5FEF;
+}

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body[data-layout="dashboard"] * {
+    color: unset;
+}
+
+html[data-layout="dashboard"] {
+    font-size: 62.5%;
+}
+
+body[data-layout="dashboard"] {
+    background: unset;
+    background-color: #f3f4ff;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+    section {
+        padding: unset;
+    }
+}
+
+ul {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+    }
+}
