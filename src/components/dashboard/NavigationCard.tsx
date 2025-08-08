@@ -10,7 +10,7 @@ interface NavigationCardProps {
 
 const NavigationCard = ({ icon, heading, className = '' }: NavigationCardProps) => {
     return (
-        <div className={styles.navigationCard}>
+        <div className={`${styles.navigationCard} ${className && ''}`}>
             <IconWithText>
                 <DashboardOverviewCardIcon
                     icon={icon}

@@ -21,7 +21,6 @@ interface AreaChartProps {
     title: string;
     highlightedValue?: string;
     highlightedMonth?: string;
-    height?: number;
     className?: string;
 }
 

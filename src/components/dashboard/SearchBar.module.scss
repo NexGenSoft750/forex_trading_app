@@ -1,4 +1,4 @@
-@import '@/styles/mixins.scss';
+@use '@/styles/mixins.scss' as *;
 
 .search-bar {
     width: 100%;
@@ -47,6 +47,26 @@
     padding-right: 1.5rem;
     font-size: 1.45rem;
     color: #737791;
+
+    &::-webkit-input-placeholder {
+        font-size: 1.35rem;
+        color: #9ca3af;
+    }
+
+    &::-moz-placeholder {
+        font-size: 1.35rem;
+        color: #9ca3af;
+    }
+
+    &:-ms-input-placeholder {
+        font-size: 1.35rem;
+        color: #9ca3af;
+    }
+
+    &::-ms-input-placeholder {
+        font-size: 1.35rem;
+        color: #9ca3af;
+    }
 
     &::placeholder {
         font-size: 1.35rem;
