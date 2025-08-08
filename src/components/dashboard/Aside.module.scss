@@ -79,7 +79,8 @@
         }
 
         .sidebar__logo-img {
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 }

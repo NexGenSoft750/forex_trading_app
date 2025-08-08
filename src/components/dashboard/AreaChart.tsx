@@ -29,12 +29,11 @@ const AreaChart: React.FC<AreaChartProps> = ({
     title,
     highlightedValue,
     highlightedMonth,
-    height = 280,
     className = ''
 }) => {
 
     // Custom tooltip component
-    const CustomTooltip = ({ active, payload, label }: any) => {
+    const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (
                 <div className="custom-tooltip" style={{
