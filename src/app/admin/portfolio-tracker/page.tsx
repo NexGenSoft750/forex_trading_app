@@ -1,9 +1,10 @@
+import styles from "./page.module.scss";
 import PortfolioLineChart from "@/components/portfolio-tracker/PortfolioLineChart";
 import PortfolioPieChart from "@/components/portfolio-tracker/PortfilioPieChart";
 
 export default function portfolioTracker() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full p-4" style={{display: "flex"}}>
+    <div className={`${styles['portfolio-tracker']}`}>
       <PortfolioLineChart />
       <PortfolioPieChart />
     </div>
