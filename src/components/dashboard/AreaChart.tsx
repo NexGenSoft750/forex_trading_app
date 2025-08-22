@@ -32,18 +32,18 @@ const AreaChart: React.FC<AreaChartProps> = ({
     className = ''
 }) => {
 
-interface CustomTooltipProps extends TooltipProps<number, string> {
-    payload?: { value: number; name: string }[];
-    label?: string | number;
-}
+    interface CustomTooltipProps extends TooltipProps<number, string> {
+        payload?: { value: number; name: string }[];
+        label?: string | number;
+    }
 
     // Custom tooltip component
     const CustomTooltip = ({
         active,
         payload,
         label,
-      }: CustomTooltipProps) => {
-        
+    }: CustomTooltipProps) => {
+
         if (active && payload && payload.length) {
             return (
                 <div className="custom-tooltip" style={{

@@ -1,0 +1,45 @@
+.sentimentOverview {
+    background-color: #ffffff;
+    padding: 2rem;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    min-height: 200px;
+
+    .title {
+        color: #000000;
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+}
+
+.rightSection {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    .smallChart {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+
+        .title {
+            color: #000000;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.tab {
+    width: 15rem;
+    height: 3.5rem;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #3a3a3aca 0%, #C5D1BC 100%);
+    border-top-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    border-bottom: 4px solid #6b6b6b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .tab__title {
+        color: #000000;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+}

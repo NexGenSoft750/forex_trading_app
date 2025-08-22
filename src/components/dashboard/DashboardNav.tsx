@@ -8,11 +8,11 @@ export default function DashboardNav() {
             <nav className={styles["dashboard-nav"]}>
                 <ul className={styles["dashboard-nav__container"]}>
                     <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/heatmap">Fundamental Heatmap</Link>
+                        <Link className={styles["dashboard-nav__link"]} href="/admin/fundamental-heatmap">Fundamental Heatmap</Link>
                         <RightArrow />
                     </li>
                     <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Currency Fundamentals</Link>
+                        <Link className={styles["dashboard-nav__link"]} href="/admin/currency-fundamentals">Currency Fundamentals</Link>
                         <RightArrow />
                     </li>
                     <li className={styles["dashboard-nav__item"]}>

@@ -99,24 +99,5 @@
             gap: 1.5rem;
             padding: 1rem;
         }
-
-        .dashboard__account-overview {
-            display: flex;
-            align-items: stretch;
-            gap: 3.3rem;
-            min-height: 25rem;
-
-            @include tablet {
-                flex-direction: column;
-                gap: 2rem;
-                min-height: auto;
-            }
-
-            @include mobile {
-                flex-direction: column;
-                gap: 1.5rem;
-                min-height: auto;
-            }
-        }
     }
 }

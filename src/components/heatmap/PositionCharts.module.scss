@@ -1,0 +1,129 @@
+.positionCharts {
+    padding: 1rem 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.chartItem {
+    margin-bottom: 12px;
+}
+
+.chartLabel {
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.chartContainer {
+    position: relative;
+    width: 100%;
+    height: 4.2rem;
+    margin-bottom: 5px;
+}
+
+.gridLines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gridLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #333;
+    transform: translateX(-50%);
+}
+
+.chartBar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.greenSection {
+    background-color: #4fb863;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.redSection {
+    background-color: #ff114b;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.indicator {
+    position: absolute;
+    top: -15.5px;
+    left: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 22px;
+    height: 67px;
+}
+
+.indicatorSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.scaleContainer {
+    margin-bottom: .5rem;
+    padding: 0 2px;
+}
+
+.scale {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+
+.scaleNumber {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+
+    &:first-child {
+        text-align: left;
+    }
+
+    &:last-child {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .positionCharts {
+        padding: 15px;
+    }
+
+    .chartLabel {
+        font-size: 14px;
+    }
+
+    .chartContainer {
+        height: 30px;
+    }
+
+    .scaleNumber {
+        font-size: 10px;
+    }
+}
