@@ -1,6 +1,6 @@
-// import { commonMetadata } from "@/lib/metadata";
+import { commonMetadata } from "@/lib/metadata";
 
-// export const metadata = commonMetadata.portfolioTracker;
+export const metadata = commonMetadata.portfolioTracker;
 
 export default function portfolioTrackerLayout({
     children,

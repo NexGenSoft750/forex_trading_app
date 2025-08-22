@@ -105,6 +105,13 @@ export const commonMetadata = {
         keywords: ["reports", "insights", "market analysis", "trading reports"],
         path: "/admin/reports",
     }),
+
+    portfolioTracker: generateMetadata({
+        title: "Portfolio Tracker",
+        description: "Track, manage, and analyze your investment portfolio with real-time insights and performance metrics.",
+        keywords: ["portfolio tracker", "investment tracking", "portfolio management", "real-time performance", "investment insights"],
+        path: "/admin/portfolio-tracker",
+    }),
 };
 
 // Dynamic metadata generator for pages with parameters

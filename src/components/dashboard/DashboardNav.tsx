@@ -48,7 +48,7 @@ export default function DashboardNav() {
                         <RightArrow />
                     </li>
                     <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Trading Journal</Link>
+                        <Link className={styles["dashboard-nav__link"]} href="/admin/portfolio-tracker">Trading Journal</Link>
                         <RightArrow />
                     </li>
                     <li className={styles["dashboard-nav__item"]}>
