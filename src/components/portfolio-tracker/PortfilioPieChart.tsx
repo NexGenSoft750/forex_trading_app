@@ -11,8 +11,8 @@ const pieData = [
 
 export default function PortfolioPieChart() {
   return (
-    <div className={`${styles['pie-chart-container']}`}>
-      <h2 className={`${styles.heading}`}>
+    <div className={styles['pie-chart-container']}>
+      <h2 className={styles.heading}>
         PORTFOLIO SUMMARY
       </h2>
       <ResponsiveContainer width="100%" height={400}>

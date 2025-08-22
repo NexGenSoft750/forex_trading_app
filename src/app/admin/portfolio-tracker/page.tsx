@@ -4,7 +4,7 @@ import PortfolioPieChart from "@/components/portfolio-tracker/PortfilioPieChart"
 
 export default function portfolioTracker() {
   return (
-    <div className={`${styles['portfolio-tracker']}`}>
+    <div className={styles['portfolio-tracker']}>
       <PortfolioLineChart />
       <PortfolioPieChart />
     </div>
