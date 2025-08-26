@@ -12,8 +12,8 @@ export const data = [
 
 export default function PortfolioLineChart () {
   return (
-      <div className={`${styles['line-chart-container']}`}>
-        <h2 className={`${styles.heading }`}>
+      <div className={styles['line-chart-container']}>
+        <h2 className={styles.heading}>
           Comulative P/L vs. Date
         </h2>
         <ResponsiveContainer width="100%" height="100%">
