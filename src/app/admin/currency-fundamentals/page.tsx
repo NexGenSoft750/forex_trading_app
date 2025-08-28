@@ -1,6 +1,7 @@
 import Section from '@/components/dashboard/Section';
 import styles from './page.module.scss';
 import Tab from '@/components/currency-fundamental/Tab';
+import EconomicDashboard from "@/components/currency-fundamental/EconomicDashboard";
 
 export default function page() {
     return (
@@ -23,6 +24,9 @@ export default function page() {
                         <Tab />
                         <Tab />
                     </div>
+                </div>
+                <div>
+                    <EconomicDashboard />
                 </div>
             </Section>
         </>
