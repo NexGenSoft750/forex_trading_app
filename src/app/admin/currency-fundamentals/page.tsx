@@ -2,6 +2,7 @@ import Section from '@/components/dashboard/Section';
 import styles from './page.module.scss';
 import Tab from '@/components/currency-fundamental/Tab';
 import EconomicDashboard from "@/components/currency-fundamental/EconomicDashboard";
+import USDSeasonalReturns from '@/components/currency-fundamental/USDSeasonalReturns';
 
 export default function page() {
     return (
@@ -27,6 +28,9 @@ export default function page() {
                 </div>
                 <div>
                     <EconomicDashboard />
+                </div>
+                <div>
+                    <USDSeasonalReturns />
                 </div>
             </Section>
         </>
