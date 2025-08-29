@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 import Tab from '@/components/currency-fundamental/Tab';
 import EconomicGraph from "@/components/currency-fundamental/EconomicGraph";
 import USDSeasonalReturns from '@/components/currency-fundamental/USDSeasonalReturns';
-import CommercialCharts from '@/components/currency-fundamental/COTCharts/COTCharts';
+import COTCharts from '@/components/currency-fundamental/COTCharts/COTCharts';
 
 export default function page() {
     return (
@@ -27,7 +27,7 @@ export default function page() {
                         <Tab />
                     </div>
                     <div>
-                        <CommercialCharts />
+                        <COTCharts />
                     </div>
                 </div>
                 <div>
