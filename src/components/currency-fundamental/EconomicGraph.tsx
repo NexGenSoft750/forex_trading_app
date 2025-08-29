@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./EconomicDashboard.module.scss";
+import styles from "./EconomicGraph.module.scss";
 
 interface ChartProps {
   data: { label: string; value: number }[]; 
@@ -9,7 +9,7 @@ interface ChartProps {
   yAxisLabels: number[];
 }
 
-const EconomicDashboard = () => {
+const EconomicGraph = () => {
   const gdpData = [
     { label: 'Q4\n2022', value: 2 },
     { label: 'Q1\n2023', value: 1},
@@ -163,4 +163,4 @@ const EconomicDashboard = () => {
   );
 };
 
-export default EconomicDashboard;
+export default EconomicGraph;
