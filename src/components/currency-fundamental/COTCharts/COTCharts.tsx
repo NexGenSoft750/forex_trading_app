@@ -1,7 +1,7 @@
-import styles from './CommercialCharts.module.scss';
+import styles from './COTCharts.module.scss';
 import Chart from "./Chart";
 
-const CommercialCharts = () => {
+const COTCharts = () => {
     const nonCommercialData = [
         { period: '2024-', long: 37000, short: 15000 },
         { period: '2024-', long: 28000, short: 10000 },
@@ -58,4 +58,4 @@ const CommercialCharts = () => {
     )
 }
 
-export default CommercialCharts;
+export default COTCharts;

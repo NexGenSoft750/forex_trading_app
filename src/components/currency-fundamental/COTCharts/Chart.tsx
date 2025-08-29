@@ -15,12 +15,9 @@ const Chart: React.FC<Chart> = ({ data, title }) => {
 
   return (
     <div className={styles.chart}>
-      {/* Title */}
       <h2 className={styles.title}>{title}</h2>
 
-      {/* Chart Container */}
       <div className={styles.container}>
-        {/* Y-axis labels */}
         <div className={styles.yAxis}>
           <span>60,000</span>
           <span>40,000</span>
@@ -28,7 +25,6 @@ const Chart: React.FC<Chart> = ({ data, title }) => {
           <span>0</span>
         </div>
 
-        {/* Grid lines */}
         <div className={styles.grid}>
           <div className={`${styles.line} ${styles.line0}`}></div>
           <div className={`${styles.line} ${styles.line1}`}></div>
@@ -36,7 +32,6 @@ const Chart: React.FC<Chart> = ({ data, title }) => {
           <div className={`${styles.line} ${styles.line3}`}></div>
         </div>
 
-        {/* Bars */}
         <div className={styles.bars}>
           {data.map((item, index) => {
             const totalHeight = ((item.long + item.short) / maxValue) * 300;
@@ -62,7 +57,6 @@ const Chart: React.FC<Chart> = ({ data, title }) => {
           })}
         </div>
 
-        {/* X-axis labels */}
         <div className={styles.xAxis}>
           {data.map((item, index) => (
             <span key={index}>{item.period}</span>
@@ -70,7 +64,6 @@ const Chart: React.FC<Chart> = ({ data, title }) => {
         </div>
       </div>
 
-      {/* Legend */}
       <div className={styles.legend}>
         <div className={styles.item}>
           <div className={`${styles.colorBox} ${styles.short}`}></div>
