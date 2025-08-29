@@ -4,6 +4,7 @@ import Tab from '@/components/currency-fundamental/Tab';
 import EconomicGraph from "@/components/currency-fundamental/EconomicGraph";
 import USDSeasonalReturns from '@/components/currency-fundamental/USDSeasonalReturns';
 import COTCharts from '@/components/currency-fundamental/COTCharts/COTCharts';
+import NetPositionComparisonChart from '@/components/currency-fundamental//NetPositionComparisonChart';
 
 export default function page() {
     return (
@@ -26,9 +27,12 @@ export default function page() {
                         <Tab />
                         <Tab />
                     </div>
-                    <div>
-                        <COTCharts />
-                    </div>
+                </div>
+                <div>
+                    <COTCharts />
+                </div>
+                <div>
+                    <NetPositionComparisonChart />
                 </div>
                 <div>
                     <EconomicGraph />
