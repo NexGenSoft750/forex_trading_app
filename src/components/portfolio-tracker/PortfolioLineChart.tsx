@@ -1,20 +1,19 @@
 "use client";
 
-
 import styles from "./PortfolioLineChart.module.scss";
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from "recharts";
 
 export const data = [
-    { day: 1, value: 10000 },
-    { day: 2, value: 10800 },
-    { day: 2.5, value: 11100 }, // ✅ sub-point
-    { day: 3, value: 14000 },
-  ];
+  { day: 1, value: 10000 },
+  { day: 2, value: 10800 },
+  { day: 2.5, value: 11100 },
+  { day: 3, value: 14000 },
+];
 
 export default function PortfolioLineChart () {
-    return (
-        <div className="bg-white p-4 shadow rounded" style={{flexGrow: "1"}}>
-        <h2 className={`${styles.heading } text-center text-2xl font-bold mb-4`}>
+  return (
+      <div className={styles['line-chart-container']}>
+        <h2 className={styles.heading}>
           Comulative P/L vs. Date
         </h2>
         <ResponsiveContainer width="100%" height="100%">
@@ -27,9 +26,9 @@ export default function PortfolioLineChart () {
                 dataKey="day"
                 type="number"
                 domain={[1, 4]}
-                tick={({ x, y }) => <text x={x} y={y} />} // ✅ renders nothing for numbers
-                axisLine={true}  // keep the X axis line
-                tickLine={true}  // keep small tick marks
+                tick={({ x, y }) => <text x={x} y={y} />} 
+                axisLine={true}  
+                tickLine={true} 
                 label={{
                     value: "Date",
                     position: "insideBottom",
@@ -40,7 +39,6 @@ export default function PortfolioLineChart () {
                     },
                 }}
             />
-
             <YAxis
                 label={{
                 value: "Cumulative P/L",
@@ -66,6 +64,6 @@ export default function PortfolioLineChart () {
             />
             </LineChart>
         </ResponsiveContainer>
-      </div>
-    )
+    </div>
+  )
 }   
