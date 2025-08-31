@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 1rem;
+    gap: 3rem;
+    padding: 4rem 0rem;
     width: 28rem;
     position: relative;
 
@@ -80,7 +81,7 @@
 
         .sidebar__logo-img {
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
         }
     }
 }

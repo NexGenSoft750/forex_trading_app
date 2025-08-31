@@ -1,46 +1,94 @@
-import Section from '@/components/dashboard/Section';
-import styles from './page.module.scss';
-import Tab from '@/components/currency-fundamental/Tab';
-import EconomicGraph from "@/components/currency-fundamental/EconomicGraph";
-import USDSeasonalReturns from '@/components/currency-fundamental/USDSeasonalReturns';
-import COTCharts from '@/components/currency-fundamental/COTCharts/COTCharts';
-import NetPositionComparisonChart from '@/components/currency-fundamental//NetPositionComparisonChart';
+"use client"
 
-export default function page() {
+import Section from '@/components/dashboard/Section';
+import styles from './CurrencyFundamentalsPage.module.scss';
+import CurrencyTab from '@/components/currency-fundamental/CurrencyTab';
+import { useState } from 'react';
+import CurrencyTabPanel from '@/components/currency-fundamental/CurrencyTabPanel';
+import { TabName } from '@/types/TabName';
+
+const DEFAULT_ACTIVE_TAB = 'USD &';
+
+export default function CurrencyFundamentalsPage() {
+    const [activeTab, setActiveTab] = useState<TabName>(DEFAULT_ACTIVE_TAB);
+
+    const handleTabClick = (tabName: TabName) => {
+        setActiveTab(tabName);
+    };
+
     return (
-        <>
-            <Section>
-                <div className={styles.currencyFundamentals}>
-                    <div className={styles.currencyFundamentals__header}>
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                        <Tab />
-                    </div>
+        <Section>
+            <div className={styles.currencyFundamentalsContainer}>
+                <div className={styles.currencyFundamentals__tabsContainer}>
+                    <CurrencyTab 
+                        text="USD &"
+                        border="curve"
+                        isActive={activeTab === "USD &"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="GBP"
+                        border="curve"
+                        isActive={activeTab === "GBP"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="EUR"
+                        border="curve"
+                        isActive={activeTab === "EUR"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="CAD"
+                        border="curve"
+                        isActive={activeTab === "CAD"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="AUD"
+                        border="curve"
+                        isActive={activeTab === "AUD"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="NZD"
+                        border="curve"
+                        isActive={activeTab === "NZD"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="CHF"
+                        border="curve"
+                        isActive={activeTab === "CHF"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="USD ( Historical Data Basic Fundamentals )"
+                        border="rounded"
+                        isActive={activeTab === "USD ( Historical Data Basic Fundamentals )"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="Seasonality"
+                        border="rounded"
+                        isActive={activeTab === "Seasonality"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="US Cot Data & Trends ( Weekly )"
+                        border="rounded"
+                        isActive={activeTab === "US Cot Data & Trends ( Weekly )"}
+                        onClick={handleTabClick}
+                    />
+                    <CurrencyTab 
+                        text="News"
+                        border="rounded"
+                        isActive={activeTab === "News"}
+                        onClick={handleTabClick}
+                    />
                 </div>
-                <div>
-                    <COTCharts />
-                </div>
-                <div>
-                    <NetPositionComparisonChart />
-                </div>
-                <div>
-                    <EconomicGraph />
-                </div>
-                <div>
-                    <USDSeasonalReturns />
-                </div>
-            </Section>
-        </>
+                <CurrencyTabPanel tabName={activeTab}/>
+            </div>
+        </Section>
     );
 }

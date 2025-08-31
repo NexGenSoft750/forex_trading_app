@@ -7,7 +7,7 @@ export default function Tr({
 }: { children: React.ReactNode, style?: React.CSSProperties, equalWidth?: boolean }) {
     return (
         <>
-            <tr className={`${styles.tr} ${equalWidth ? styles.equalWidth : ''}`} style={style}>
+            <tr className={`${equalWidth ? styles.equalWidth : ''}`} style={style}>
                 {children}
             </tr>
         </>

@@ -1,7 +1,7 @@
 import styles from './Tbody.module.scss';
 
 export default function Tbody({
-    children
+    children,
 }: { children: React.ReactNode }) {
     return (
         <>

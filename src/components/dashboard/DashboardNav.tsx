@@ -1,62 +1,39 @@
+"use client";
+
 import Link from "next/link";
-import styles from './DashboardNav.module.scss';
+import styles from "./DashboardNav.module.scss";
 import RightArrow from "./RightArrow";
+import { usePathname } from "next/navigation";
+import NAV_ITEMS from "@/lib/navItems";
 
 export default function DashboardNav() {
-    return (
-        <>
-            <nav className={styles["dashboard-nav"]}>
-                <ul className={styles["dashboard-nav__container"]}>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/admin/fundamental-heatmap">Fundamental Heatmap</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/admin/currency-fundamentals">Currency Fundamentals</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Score Board</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Cot Report</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Seasonality</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Events Calender</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Retail Sentiment</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Calculator</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Trading Alerts</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Education</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/admin/portfolio-tracker">Trading Journal</Link>
-                        <RightArrow />
-                    </li>
-                    <li className={styles["dashboard-nav__item"]}>
-                        <Link className={styles["dashboard-nav__link"]} href="/">Risk Mode</Link>
-                        <RightArrow />
-                    </li>
-                </ul>
-            </nav>
-        </>
-    );
+  const currentPath = usePathname();
+
+  const getActiveLinkClass = (linkPath: string): string =>
+    currentPath === linkPath
+      ? [
+        styles["dashboard-nav__wrapper--active"],
+        styles["dashboard-nav__item--active"]
+      ].join(" ")
+      : "";
+
+  return (
+    <nav className={styles["dashboard-nav"]}>
+      <ul className={styles["dashboard-nav__container"]}>
+        {NAV_ITEMS.map(({ key, label, href }) => (
+          <div key={key} className={styles["dashboard-nav__wrapper"]}>
+            <li className={styles["dashboard-nav__item"]}>
+              <Link
+                className={`${styles["dashboard-nav__link"]} ${getActiveLinkClass(href)}`}
+                href={href}
+              >
+                {label}
+              </Link>
+              <RightArrow />
+            </li>
+          </div>
+        ))}
+      </ul>
+    </nav>
+  );
 }
