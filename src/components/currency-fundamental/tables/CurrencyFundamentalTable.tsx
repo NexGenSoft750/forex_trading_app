@@ -1,9 +1,9 @@
-import Table from '@/components/tables/Heatmap/Table';
-import Thead from '@/components/tables/Heatmap/Thead';
-import Th from '@/components/tables/Heatmap/Th';
-import Tr from '@/components/tables/Heatmap/Tr';
-import Tbody from '@/components/tables/Heatmap/Tbody';
-import Td from '@/components/tables/Heatmap/Td';
+import Table from '@/components/base-table/Heatmap/Table';
+import Thead from '@/components/base-table/Heatmap/Thead';
+import Th from '@/components/base-table/Heatmap/Th';
+import Tr from '@/components/base-table/Heatmap/Tr';
+import Tbody from '@/components/base-table/Heatmap/Tbody';
+import Td from '@/components/base-table/Heatmap/Td';
 
 export default function CurrencyFundamentalTable() {
     return (

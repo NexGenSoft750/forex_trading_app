@@ -1,7 +1,7 @@
-import Table from "../tables/Heatmap/Table";
-import Td from "../tables/Heatmap/Td";
-import Tbody from "../tables/Heatmap/Tbody";
-import Tr from "../tables/Heatmap/Tr";
+import Table from "../base-table/Heatmap/Table";
+import Td from "../base-table/Heatmap/Td";
+import Tbody from "../base-table/Heatmap/Tbody";
+import Tr from "../base-table/Heatmap/Tr";
 
 export default function SeasonalityTable() {
     return (

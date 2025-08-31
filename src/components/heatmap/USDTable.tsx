@@ -1,9 +1,9 @@
-import Table from "../tables/Heatmap/Table";
-import Td from "../tables/Heatmap/Td";
-import Th from "../tables/Heatmap/Th";
-import Thead from "../tables/Heatmap/Thead";
-import Tbody from "../tables/Heatmap/Tbody";
-import Tr from "../tables/Heatmap/Tr";
+import Table from "../base-table/Heatmap/Table";
+import Td from "../base-table/Heatmap/Td";
+import Th from "../base-table/Heatmap/Th";
+import Thead from "../base-table/Heatmap/Thead";
+import Tbody from "../base-table/Heatmap/Tbody";
+import Tr from "../base-table/Heatmap/Tr";
 
 export default function USDTable() {
     return (
