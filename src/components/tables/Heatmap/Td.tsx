@@ -1,29 +1,28 @@
 import React from 'react';
 import styles from './Td.module.scss';
 
-type TdProps = { 
-    children?: React.ReactNode; 
+type TdProps = {
+    children?: React.ReactNode;
     style?: React.CSSProperties;
-    fontSize?: 'small' | 'large';
-    color?: string; 
-    bgColor?: string; 
-    light?: boolean; 
-    bold?: boolean; 
-    textDecoration?: 'default' | 'underline';
+    bold?: boolean;
+    color?: string;
+    bgColor?: string;
     colSpan?: number;
     rowSpan?: number;
+    fontSize?: 'small' | 'large';
+    textDecoration?: 'default' | 'underline';
 };
 
 export default function Td({
     children,
     style,
+    bold = false,
+    rowSpan = 1,
+    colSpan = 1,
     fontSize = 'large',
     color = "#000000",
     bgColor = "#ffffff",
-    bold = false,
     textDecoration = 'default',
-    rowSpan = 1,
-    colSpan = 1,
 }: TdProps) {
     const getTdClasses = (): string => [
         bold ? styles['td--bold'] : '',

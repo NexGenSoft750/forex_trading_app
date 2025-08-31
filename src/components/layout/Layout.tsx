@@ -5,9 +5,11 @@ import Aside from '@/components/dashboard/Aside';
 import styles from './Layout.module.scss';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+    const title = usePageTitle();
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -34,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className={styles["dashboard__panel"]}>
                     <Header
                         className={styles["dashboard-header--bg-light"]}
-                        text='Dashboard!'
+                        text={title}
                     >
                         {/* Mobile Hamburger Menu */}
                         <button

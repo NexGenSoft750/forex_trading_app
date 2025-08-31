@@ -6,7 +6,6 @@ import CurrencyTab from '@/components/currency-fundamental/CurrencyTab';
 import { useState } from 'react';
 import CurrencyTabPanel from '@/components/currency-fundamental/CurrencyTabPanel';
 import { TabName } from '@/types/TabName';
-
 const DEFAULT_ACTIVE_TAB = 'USD &';
 
 export default function CurrencyFundamentalsPage() {
@@ -20,74 +19,74 @@ export default function CurrencyFundamentalsPage() {
         <Section>
             <div className={styles.currencyFundamentalsContainer}>
                 <div className={styles.currencyFundamentals__tabsContainer}>
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="USD &"
                         border="curve"
                         isActive={activeTab === "USD &"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="GBP"
                         border="curve"
                         isActive={activeTab === "GBP"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="EUR"
                         border="curve"
                         isActive={activeTab === "EUR"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="CAD"
                         border="curve"
                         isActive={activeTab === "CAD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="AUD"
                         border="curve"
                         isActive={activeTab === "AUD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="NZD"
                         border="curve"
                         isActive={activeTab === "NZD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="CHF"
                         border="curve"
                         isActive={activeTab === "CHF"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="USD ( Historical Data Basic Fundamentals )"
                         border="rounded"
                         isActive={activeTab === "USD ( Historical Data Basic Fundamentals )"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="Seasonality"
                         border="rounded"
                         isActive={activeTab === "Seasonality"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="US Cot Data & Trends ( Weekly )"
                         border="rounded"
                         isActive={activeTab === "US Cot Data & Trends ( Weekly )"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab 
+                    <CurrencyTab
                         text="News"
                         border="rounded"
                         isActive={activeTab === "News"}
                         onClick={handleTabClick}
                     />
                 </div>
-                <CurrencyTabPanel tabName={activeTab}/>
+                <CurrencyTabPanel tabName={activeTab} />
             </div>
         </Section>
     );

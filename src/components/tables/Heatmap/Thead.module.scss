@@ -5,4 +5,12 @@
     padding: unset !important;
     outline: unset !important;
     vertical-align: unset !important;
+
+    th:first-child {
+        border-left: 3px solid var(--border-color);
+    }
+
+    th:last-child {
+        border-right: 3px solid var(--border-color);
+    }
 }

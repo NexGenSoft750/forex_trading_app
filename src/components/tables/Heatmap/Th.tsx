@@ -6,19 +6,19 @@ export default function Th({
     bgColor,
     colSpan = 1,
     textDecoration = 'default',
-}: { 
-    children?: React.ReactNode; 
-    color?: string; 
-    colSpan?: number; 
-    textDecoration?: 'default' | 'underline'; 
-    bgColor?: string 
+}: {
+    children?: React.ReactNode;
+    color?: string;
+    colSpan?: number;
+    textDecoration?: 'default' | 'underline';
+    bgColor?: string
 }) {
     return (
         <th
             colSpan={colSpan}
             className={`${styles.th} ${textDecoration === 'underline' ? styles['th--underline'] : ''}`}
             style={{
-                color,              
+                color,
                 ...(bgColor ? { backgroundColor: bgColor } : {}),
             }}
         >

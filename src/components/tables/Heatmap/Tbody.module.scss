@@ -11,3 +11,9 @@
   background-attachment: unset !important;
   background-position: unset !important;
 }
+
+.tbody-full-borders {
+  td {
+    border: 3px solid #C0B7B7 !important;
+  }
+}

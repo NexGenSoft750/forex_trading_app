@@ -91,19 +91,11 @@ export const commonMetadata = {
         path: "/admin/currency-fundamental",
     }),
 
-    // Add more common pages as needed
-    analytics: generateMetadata({
-        title: "Trading Analytics",
-        description: "Detailed trading analytics and performance metrics for forex market operations",
-        keywords: ["analytics", "performance", "metrics", "trading statistics"],
-        path: "/admin/analytics",
-    }),
-
-    reports: generateMetadata({
-        title: "Reports & Insights",
-        description: "Comprehensive reports and market insights for informed trading decisions",
-        keywords: ["reports", "insights", "market analysis", "trading reports"],
-        path: "/admin/reports",
+    scoreBoard: generateMetadata({
+        title: "Scoreboard",
+        description: "Comprehensive trading scoreboard displaying performance metrics, currency scores, market sentiment, and key economic insights in real time",
+        keywords: ["scoreboard", "trading performance", "currency strength", "market sentiment", "economic insights"],
+        path: "/admin/score-board",
     }),
 
     portfolioTracker: generateMetadata({

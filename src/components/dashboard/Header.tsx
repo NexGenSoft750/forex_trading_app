@@ -20,7 +20,7 @@ export default function Header({
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     {children}
                     <h1 className={styles.header__heading}>
-                        {text}
+                        {text}!
                     </h1>
                 </div>
                 <div className={styles.header__actions}>
