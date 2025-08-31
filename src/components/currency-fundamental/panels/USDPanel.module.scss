@@ -1,0 +1,23 @@
+.usdSentimentOverview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    background-color: #F5F5F5;
+    padding: 3rem;
+
+    .guageChartWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+
+        .guageChartTitle {
+            color: #000000;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+
+    }
+}

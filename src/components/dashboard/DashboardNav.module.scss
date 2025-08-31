@@ -13,6 +13,10 @@
     }
 
     .dashboard-nav__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         @include tablet {
             display: flex;
             flex-wrap: wrap;
@@ -27,71 +31,92 @@
             width: 100%;
         }
 
-        .dashboard-nav__item {
-            color: #999999;
-            margin-top: 3.2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            transition: color 0.2s ease-in-out;
-            cursor: pointer;
-
-            @include tablet {
-                margin-top: 0;
-                gap: 1.5rem;
-                padding: 0.8rem 1.2rem;
-                background-color: rgba(255, 255, 255, 0.1);
-                border-radius: 0.5rem;
-            }
-
-            @include mobile {
-                margin-top: 0;
-                gap: 0;
-                padding: 1rem;
-                background-color: rgba(255, 255, 255, 0.1);
-                border-radius: 0.4rem;
-                font-size: 1.2rem;
-                justify-content: flex-start;
-                width: 100%;
-            }
-
-            .dashboard-nav__link {
-                text-decoration: none;
+        .dashboard-nav__wrapper {
+            .dashboard-nav__item {
                 color: #999999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
                 transition: color 0.2s ease-in-out;
+                cursor: pointer;
+                padding: 1rem;
 
                 @include tablet {
-                    white-space: nowrap;
+                    margin-top: 0;
+                    gap: 1.5rem;
+                    padding: 0.8rem 1.2rem;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 0.5rem;
                 }
 
                 @include mobile {
-                    white-space: nowrap;
+                    margin-top: 0;
+                    gap: 0;
+                    padding: 1rem;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 0.4rem;
+                    font-size: 1.2rem;
+                    justify-content: flex-start;
                     width: 100%;
+                }
+
+                .dashboard-nav__link {
+                    text-decoration: none;
+                    color: #999999;
+                    transition: color 0.2s ease-in-out;
+
+                    @include tablet {
+                        white-space: nowrap;
+                    }
+
+                    @include mobile {
+                        white-space: nowrap;
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        color: white !important;
+                    }
                 }
 
                 &:hover {
                     color: white !important;
+
+                    @include tablet {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+
+                    @include mobile {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
                 }
-            }
 
-            &:hover {
-                color: white !important;
-
-                @include tablet {
-                    background-color: rgba(255, 255, 255, 0.2);
-                }
-
+                // Hide arrows on mobile
                 @include mobile {
-                    background-color: rgba(255, 255, 255, 0.2);
+                    svg {
+                        display: none;
+                    }
+                }
+
+                &--active {
+                    background-color: #176ad1;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+
+                    a,
+                    svg {
+                        color: white !important;
+                    }
                 }
             }
 
-            // Hide arrows on mobile
-            @include mobile {
-                svg {
-                    display: none;
-                }
+            &--active {
+                padding: 0rem 1rem;
+                border-left: 4px solid #176ad1;
             }
         }
     }

@@ -1,0 +1,57 @@
+    .cotPositionsContainer {
+        display: flex;
+        gap: 4.5rem;
+        padding: 3rem 2rem;
+
+        .cotPositionsItem {
+            flex: 1 1 0;
+
+            .cotPositionsLabelsContainer {
+                width: 96%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .cotPositionsLabel {
+                    color: black;
+                    font-size: 1.6rem;
+                }
+            }
+
+            .cotPositionsWrapper {
+                display: flex;
+                height: 7rem;
+                border-radius: 4rem;
+                overflow: hidden;
+                margin-top: 1.2rem;
+
+                .cotPosition {
+                    flex: 1;
+                    color: white;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .cotLongPosition {
+                    background-color: #34A853;
+                }
+
+                .cotShortPosition {
+                    background-color: #FF0000;
+                }
+            }
+
+            .cotPositionCaption {
+                color: black;
+                font-size: 1.6rem;
+                margin-top: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }

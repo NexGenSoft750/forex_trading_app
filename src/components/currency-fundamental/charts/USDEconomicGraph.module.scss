@@ -1,0 +1,137 @@
+.economicGraphContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 24px;
+}
+
+
+.chart {
+    background-color: #000000;
+    padding: 24px;
+    border-radius: 8px;
+    min-height: 425px;
+
+    h2 {
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 500;
+        margin: 0 0 34px 0;
+        text-align: center;
+    }
+
+    .chartArea {
+        position: relative;
+        height: 256px;
+    }
+
+    .yAxis {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #ffffff;
+        font-size: 14px;
+
+        span {
+            position: absolute;
+            left: -8px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .gridLines {
+        position: absolute;
+        left: 32px;
+        top: 0;
+        right: 0;
+        height: 100%;
+
+        .line {
+            position: absolute;
+            width: 100%;
+            border-top: 1px solid #4b5563;
+        }
+    }
+
+    .bars {
+        position: absolute;
+        left: 32px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .barWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 0 2px;
+            height: 100%;
+            max-width: 60px;
+
+            .barContainer {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+
+                .bar {
+                    width: 80%;
+                    border-radius: 10px 10px 0 0;
+                    position: relative;
+
+                    .value {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: #ffffff;
+                        font-size: 16px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .xAxis {
+        position: absolute;
+        left: 32px;
+        right: 0;
+        bottom: -45px;
+        display: flex;
+        justify-content: space-between;
+
+        .labelWrapper {
+            flex: 1;
+            text-align: center;
+            margin: 0 -4px;
+
+            .label {
+                color: #ffffff;
+                font-size: 12px;
+                display: inline-block;
+                transform-origin: center;
+
+                &.gdp {
+                    white-space: pre-line;
+                    transform: none;
+                }
+
+                &.rotated {
+                    white-space: nowrap;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

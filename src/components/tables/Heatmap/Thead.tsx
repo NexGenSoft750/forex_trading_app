@@ -2,7 +2,7 @@ import styles from './Thead.module.scss';
 
 export default function Thead({
     children,
-    bgColor = "#12AD2B",
+    bgColor = '#fffffff',
 }: {
     children: React.ReactNode,
     bgColor?: string,

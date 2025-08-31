@@ -1,14 +1,38 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
 .table {
-    width: 100% !important;
-    min-width: 100% !important;
-    border-collapse: unset !important;
+    width: max-content;
+    border-collapse: collapse;
     border-spacing: unset !important;
     border: unset !important;
-    margin: unset !important;
     padding: unset !important;
     outline: unset !important;
     vertical-align: unset !important;
     caption-side: unset !important;
     empty-cells: unset !important;
     table-layout: unset !important;
+}
+
+.table--cellPaddingLarge {
+    td {
+        padding: 1.3rem 4rem;
+    }
+}
+
+.table--bordered {
+    border: 2px solid black !important;
+
+    td,
+    th {
+        border: 2px solid black !important;
+    }
+}
+
+.table--rounded-top {
+    border-collapse: separate;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
 }
