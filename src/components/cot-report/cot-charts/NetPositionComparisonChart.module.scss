@@ -1,0 +1,70 @@
+.chartWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-top: 3rem;
+
+    .chartContainer {
+        position: relative;
+    }
+
+    .chartTitle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: black;
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+}
+
+    .legend {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 1.5rem;
+
+        .legendItem {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .colorBox {
+                width: 1.8rem;
+                height: 1.6rem;
+            }
+
+            .label {
+                color: black;
+                font-size: 1.6rem;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 80px;
+            left: 0;
+        }
+    }
+}
+
+.yAxisLabel {
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 3px;
+}

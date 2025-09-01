@@ -1,9 +1,12 @@
 .tableContainer {
     width: 100%;
-    overflow-x: hidden !important;
+    overflow: auto !important;
+    padding-bottom: 2rem;
 }
 
 .table {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     border-collapse: collapse;
     border-spacing: unset !important;

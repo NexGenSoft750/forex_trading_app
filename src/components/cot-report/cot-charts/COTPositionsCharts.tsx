@@ -1,7 +1,7 @@
-import styles from './COTCharts.module.scss';
-import Chart from "./Chart";
+import styles from './COTPositionsCharts.module.scss';
+import PositionChart from './PositionChart';
 
-const COTCharts = () => {
+export default function COTPositionsCharts() {
     const nonCommercialData = [
         { period: '2024-', long: 37000, short: 15000 },
         { period: '2024-', long: 28000, short: 10000 },
@@ -49,13 +49,11 @@ const COTCharts = () => {
         { period: '2026-', long: 35000, short: 16000 },
         { period: '2026-', long: 37000, short: 15000 }
     ];
-    
+
     return (
         <div className={styles['charts-container']}>
-            <Chart data={nonCommercialData} title="Non Comm Long vs Short"/>
-            <Chart data={commercialData} title="Comm Long vs Short"/>
+            <PositionChart data={nonCommercialData} title="Non Comm Long vs Short" />
+            <PositionChart data={commercialData} title="Comm Long vs Short" />
         </div>
     )
 }
-
-export default COTCharts;

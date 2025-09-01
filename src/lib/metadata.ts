@@ -112,6 +112,21 @@ export const commonMetadata = {
         keywords: ["portfolio tracker", "investment tracking", "portfolio management", "real-time performance", "investment insights"],
         path: "/admin/portfolio-tracker",
     }),
+
+    cotReport: generateMetadata({
+        title: "COT Report",
+        description: "Analyze Commitments of Traders (COT) reports to gain insights into market sentiment, trader positions, and market trends.",
+        keywords: [
+            "COT report",
+            "commitments of traders",
+            "market sentiment",
+            "trader positions",
+            "futures market analysis",
+            "forex cot report",
+            "commodity trading insights"
+        ],
+        path: "/admin/cot-report",
+    }),
 };
 
 // Dynamic metadata generator for pages with parameters
