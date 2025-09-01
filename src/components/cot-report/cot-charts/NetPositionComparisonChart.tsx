@@ -8,65 +8,54 @@ interface DataPoint {
 
 const NetPositionComparisonChart: React.FC = () => {
     const netCommData: DataPoint[] = [
-        { date: '2024-08-12', value: -3 },
-        { date: '2024-08-13', value: -3 },
-        { date: '2024-08-14', value: -3 },
-        { date: '2024-08-15', value: -3 },
-        { date: '2024-08-16', value: -3 },
-        { date: '2024-08-17', value: -1 },
-        { date: '2024-08-18', value: 0 },
-        { date: '2024-08-19', value: 0.05 },
-        { date: '2024-08-20', value: 0.03 },
-        { date: '2024-08-21', value: 0.08 },
-        { date: '2024-08-22', value: 0.09 },
-        { date: '2024-08-23', value: -0.04 },
-        { date: '2024-08-24', value: -0.07 },
-        { date: '2024-08-25', value: 0 },
+        { date: '2024-08-12', value: -0.3 },
+        { date: '2024-08-13', value: -0.4 },
+        { date: '2024-08-16', value: -0.3 },
+        { date: '2024-08-18', value: 0.6 },
+        { date: '2024-08-19', value: 1.2 },
+        { date: '2024-08-20', value: 1 },
+        { date: '2024-08-22', value: 1 },
+        { date: '2024-08-23', value: 0.7 },
+        { date: '2024-08-25', value: 0.7 },
         { date: '2024-08-26', value: 0.02 },
         { date: '2024-08-27', value: 0.06 },
-        { date: '2024-08-28', value: 0.06 },
-        { date: '2024-08-29', value: 0.05 },
         { date: '2024-08-30', value: 0.05 },
-        { date: '2024-09-01', value: -0.25 },
         { date: '2024-09-02', value: -0.35 },
-        { date: '2024-09-03', value: -3 },
-        { date: '2024-09-04', value: -3 }
+        { date: '2024-09-03', value: -0.3 },
+        { date: '2024-09-04', value: -0.3 }
     ];
 
     const netNonCommData: DataPoint[] = [
-        { date: '2024-08-12', value: 0.45 },
-        { date: '2024-08-13', value: 0.55 },
-        { date: '2024-08-14', value: 0.45 },
-        { date: '2024-08-15', value: 0.51 },
-        { date: '2024-08-16', value: 0.53 },
-        { date: '2024-08-17', value: 0.55 },
-        { date: '2024-08-18', value: 0.1 },
-        { date: '2024-08-19', value: 0.05 },
-        { date: '2024-08-20', value: 0 },
-        { date: '2024-08-21', value: -0.07 },
-        { date: '2024-08-22', value: -0.07 },
-        { date: '2024-08-23', value: 0.04 },
-        { date: '2024-08-24', value: 0.07 },
-        { date: '2024-08-25', value: 0 },
-        { date: '2024-08-26', value: -0.09 },
-        { date: '2024-08-27', value: -0.09 },
+        { date: '2024-08-12', value: 1.8 },
+        { date: '2024-08-13', value: 2.0 },
+        { date: '2024-08-16', value: 1.6 },
+        { date: '2024-08-17', value: 0.9 },
+        { date: '2024-08-18', value: 0.9 },
+        { date: '2024-08-19', value: 0.5 },
+        { date: '2024-08-20', value: 0.5 },
+        { date: '2024-08-21', value: 1.1 },
+        { date: '2024-08-23', value: 1.1 },
+        { date: '2024-08-25', value: 0.5 },
         { date: '2024-08-28', value: -0.09 },
         { date: '2024-08-29', value: -0.10 },
         { date: '2024-08-30', value: -0.11 },
         { date: '2024-09-01', value: 0.28 },
-        { date: '2024-09-02', value: 0.38 },
-        { date: '2024-09-03', value: 0.48 },
         { date: '2024-09-04', value: 0.52 }
     ];
 
-    const chartWidth = 1061;
+    const chartWidth = 520;
     const chartHeight = 400;
     const padding = { top: 80, right: 40, bottom: 80, left: 60 };
     const innerWidth = chartWidth - padding.left - padding.right;
     const innerHeight = chartHeight - padding.top - padding.bottom;
 
     const xScale = (index: number) => (index / (netCommData.length - 1)) * innerWidth;
-    const yScale = (value: number) => innerHeight - ((value + 0.8) / 1.6) * innerHeight;
+    const yScale = (value: number) => {
+        const scaledValue = value * 10000; // scale up to match your screenshot
+        const minY = -20000;
+        const maxY = 30000;
+        return innerHeight - ((scaledValue - minY) / (maxY - minY)) * innerHeight;
+    };
 
     const generatePath = (data: DataPoint[]): string => {
         return data.map((point, index) => {
@@ -133,10 +122,32 @@ const NetPositionComparisonChart: React.FC = () => {
                             <circle key={`non-comm-${index}`} cx={xScale(index)} cy={yScale(point.value)} r={6} fill="#66ff66" />
                         ))}
                     </g>
+                    <g transform={`translate(45, 80)`}>
+                        {[
+                            { y: 205, value: -20000 },
+                            { y: 165, value: -10000 },
+                            { y: 125, value: 0 },
+                            { y: 85, value: 10000 },
+                            { y: 45, value: 20000 },
+                            { y: 5, value: 30000 },
+                        ].map((tick, i) => (
+                            <text
+                                key={`y-label-${i}`}
+                                x={0}
+                                y={tick.y}
+                                textAnchor="end"
+                                fontSize={14}
+                                fill="black"
+                                fontWeight="bold"
+                                className={styles.yAxisLabel}
+                            >
+                                {tick.value.toLocaleString()}
+                            </text>
+                        ))}
+                    </g>
 
                     <g transform={`translate(${padding.left}, ${padding.top + innerHeight + 25})`}>
                         <rect x={-20} y={-45} width={innerWidth + 40} height={100} fill="white" rx={4} ry={4} />
-                        <line x1={-20} y1={-45} x2={innerWidth + 20} y2={-45} stroke="black" strokeWidth={2} />
 
                         {dateLabels.map((date, index) => (
                             <text
@@ -146,7 +157,7 @@ const NetPositionComparisonChart: React.FC = () => {
                                 textAnchor="start"
                                 fill="black"
                                 fontSize={13}
-                                transform={`rotate(-90, ${xScale(index)}, 0)`}
+                                transform={`rotate(-55, ${xScale(index)}, 0)`}
                                 opacity={0.8}
                                 letterSpacing="1"
                             >
