@@ -7,7 +7,7 @@ type HeatMapModalProps = {
     onClose: () => void;
 }
 
-const txt = (s: any) => s;
+const txt = (s: React.CSSProperties) => s;
 
 function GradientBar({
     width = "520px",

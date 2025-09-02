@@ -23,20 +23,20 @@ export default function CHFTable() {
                 </Thead>
                 <Tbody>
                     <Tr>
-                        <Td light>Ecnomic Growth</Td>
-                        <Td light>0.4</Td>
+                        <Td>Ecnomic Growth</Td>
+                        <Td>0.4</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Labour Market</Td>
-                        <Td light>3</Td>
+                        <Td>Labour Market</Td>
+                        <Td>3</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Ecnomic Heat</Td>
-                        <Td light>0.6</Td>
+                        <Td>Ecnomic Heat</Td>
+                        <Td>0.6</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Monetry Supply Rate</Td>
-                        <Td light>0.5</Td>
+                        <Td>Monetry Supply Rate</Td>
+                        <Td>0.5</Td>
                     </Tr>
                 </Tbody>
             </Table>

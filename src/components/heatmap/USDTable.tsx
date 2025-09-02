@@ -23,20 +23,20 @@ export default function USDTable() {
                 </Thead>
                 <Tbody>
                     <Tr>
-                        <Td light>Ecnomic Growth</Td>
-                        <Td light>2.3</Td>
+                        <Td>Ecnomic Growth</Td>
+                        <Td>2.3</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Labour Market</Td>
-                        <Td light>4</Td>
+                        <Td>Labour Market</Td>
+                        <Td>4</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Ecnomic Heat</Td>
-                        <Td light>2.9</Td>
+                        <Td>Ecnomic Heat</Td>
+                        <Td>2.9</Td>
                     </Tr>
                     <Tr>
-                        <Td light>Monetry Supply Rate</Td>
-                        <Td light>4.5</Td>
+                        <Td>Monetry Supply Rate</Td>
+                        <Td>4.5</Td>
                     </Tr>
                 </Tbody>
             </Table>

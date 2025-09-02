@@ -25,7 +25,7 @@ export default function Th({
             style={{
                 color,
                 border: `3px solid ${borderColor}`,
-                ...(bgColor ? { backgroundColor: bgColor, ['--border-top-color' as any]: bgColor } : {}),
+                ...(bgColor ? { backgroundColor: bgColor, '--border-top-color': bgColor } : {}),
             }}
         >
             {children}

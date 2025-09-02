@@ -10,7 +10,6 @@ interface RowData {
 }
 
 export default function RiskModeCurrentlyPairTable() {
-    // repeat rows as in the image
     const rows: RowData[] = Array(22).fill({
         currentlyPair: "USDCAD",
         riskOnScore: "-1.5",

@@ -20,54 +20,42 @@ export default function NetScoreTable() {
                 </Thead>
                 <Tbody>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             Fundamental Score
                         </Td>
                         <Td>12.24</Td>
                         <Td>Bullish</Td>
                     </Tr>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             Seasonality
                         </Td>
                         <Td>3</Td>
                         <Td>Bullish</Td>
                     </Tr>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             Cot Score
                         </Td>
                         <Td>1</Td>
                         <Td>Bullish</Td>
                     </Tr>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             C-Score
                         </Td>
                         <Td>1</Td>
                         <Td>Bullish</Td>
                     </Tr>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             T-Score
                         </Td>
                         <Td>2</Td>
                         <Td>Bullish</Td>
                     </Tr>
                     <Tr>
-                        <Td
-                            light
-                        >
+                        <Td>
                             Risk Meter
                         </Td>
                         <Td>70</Td>
