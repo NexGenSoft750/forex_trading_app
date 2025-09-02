@@ -3,9 +3,15 @@ import Tr from '@/components/base-table/Heatmap/Tr';
 import Tbody from '@/components/base-table/Heatmap/Tbody';
 import Td from '@/components/base-table/Heatmap/Td';
 
+interface RowData {
+    currentlyPair: string;
+    riskOnScore: string;
+    riskOffScore: string;
+}
+
 export default function RiskModeCurrentlyPairTable() {
     // repeat rows as in the image
-    const rows = Array(22).fill({
+    const rows: RowData[] = Array(22).fill({
         currentlyPair: "USDCAD",
         riskOnScore: "-1.5",
         riskOffScore: "1",
@@ -26,7 +32,7 @@ export default function RiskModeCurrentlyPairTable() {
                         <Td borderColor="#000000">{row.riskOnScore}</Td>
                         <Td
                             borderColor="#000000"
-                            bgColor={i % 2 != 0 ? "#6CB56A" : undefined}
+                            bgColor={i % 2 !== 0 ? "#6CB56A" : "#ffffff"}
                         >
                             {row.riskOffScore}
                         </Td>
