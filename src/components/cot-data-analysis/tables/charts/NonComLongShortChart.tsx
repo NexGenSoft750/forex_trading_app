@@ -30,6 +30,7 @@ export default function NonComLongShortChart() {
       <div className={styles.chart}>
         {data.map((item, index) => (
           <div key={index} className={styles.row}>
+            <div className={styles.label}>{item.name}</div>
             <div className={styles.barContainer}>
               <div className={styles.long} style={{ width: `${item.long}%` }}>
                 <span>{item.long}</span>
