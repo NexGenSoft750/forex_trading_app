@@ -19,6 +19,8 @@
 
 // Mobile sidebar container
 .sidebar {
+    width: 20%;
+
     @include mobile {
         display: none;
         position: fixed;
@@ -82,7 +84,7 @@
 }
 
 .dashboard__panel {
-    flex-grow: 1;
+    width: 80%;
 
     .dashboard__content {
         display: flex;

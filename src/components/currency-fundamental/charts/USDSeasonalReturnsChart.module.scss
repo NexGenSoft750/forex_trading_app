@@ -1,19 +1,19 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    margin-top: 2.5rem;
     padding: 20px;
     background-color: #000;
     font-family: Arial, sans-serif;
 }
 
+
 .title {
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: 3rem;
     font-weight: normal;
-    margin-bottom: 40px;
     letter-spacing: 0.5px;
+    margin-top: 1.2rem;
 }
 
 .chart {
@@ -22,11 +22,22 @@
     background-color: #000;
 }
 
+.scrollWrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3rem;
+}
+
+.chart {
+    min-width: 1200px;
+}
+
 .gridLine {
     position: absolute;
     left: 60px;
     right: 0;
-    height: 1px;
+    height: 2px;
     background-color: #333;
 }
 

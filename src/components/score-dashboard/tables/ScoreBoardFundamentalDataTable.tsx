@@ -13,27 +13,27 @@ export default function ScoreBoardFundamentalDataTable() {
             <Table>
                 <Thead bgColor="#A4C1F4">
                     <Tr>
-                        <Th></Th>
-                        <Th>GDP ANNUAL</Th>
-                        <Th>CHANGE</Th>
-                        <Th>GDP</Th>
-                        <Th>Change</Th>
-                        <Th>UNEMPLOYMENT</Th>
-                        <Th>Change</Th>
-                        <Th>INFLATION</Th>
-                        <Th>Change</Th>
-                        <Th>INTEREST RATE</Th>
-                        <Th>Change</Th>
-                        <Th>INFLATION MOM</Th>
-                        <Th>Change</Th>
-                        <Th>PMI-S</Th>
-                        <Th>Change</Th>
-                        <Th>PMI-M</Th>
-                        <Th>Change</Th>
-                        <Th>RETAIL SALES</Th>
-                        <Th>Change</Th>
-                        <Th>CCI Change</Th>
-                        <Th>Business Con</Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4">GDP ANNUAL</Th>
+                        <Th bgColor="#A4C1F4">CHANGE</Th>
+                        <Th bgColor="#A4C1F4">GDP</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">UNEMPLOYMENT</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">INFLATION</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">INTEREST RATE</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">INFLATION MOM</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">PMI-S</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">PMI-M</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">RETAIL SALES</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">CCI Change</Th>
+                        <Th bgColor="#A4C1F4">Business Con</Th>
                     </Tr>
                 </Thead>
                 <Tbody fullBorders>

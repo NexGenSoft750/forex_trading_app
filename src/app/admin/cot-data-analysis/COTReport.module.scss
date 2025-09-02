@@ -1,0 +1,21 @@
+.positionChartsContainer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.currencyPairsContainer {
+    display: flex;
+    gap: 2rem;
+
+    .currencyPairsContainer__table {
+        width: 26%;
+    }
+
+    .currencyPairsContainer__chart {
+        width: 72%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

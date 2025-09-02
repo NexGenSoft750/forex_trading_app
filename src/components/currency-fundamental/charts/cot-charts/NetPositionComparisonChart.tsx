@@ -61,7 +61,7 @@ const NetPositionComparisonChart: React.FC = () => {
 
     const chartWidth = 1061;
     const chartHeight = 400;
-    const padding = { top: 80, right: 40, bottom: 80, left: 60 };
+    const padding = { top: 40, right: 40, bottom: 80, left: 60 };
     const innerWidth = chartWidth - padding.left - padding.right;
     const innerHeight = chartHeight - padding.top - padding.bottom;
 
@@ -85,20 +85,18 @@ const NetPositionComparisonChart: React.FC = () => {
 
     return (
         <div className={styles.chartWrapper}>
-            <div className={styles.chartContainer} style={{ width: chartWidth, height: chartHeight }}>
+            <div className={styles.chartContainer} style={{ width: chartWidth }}>
                 <div className={styles.chartTitle}>Comm vs Non Comm Position (Net)</div>
-
                 <div className={styles.legend}>
-                    <div className="legendItem">
-                        <div className="colorBox" style={{ backgroundColor: '#ff3333' }}></div>
-                        <span className="label">Net Comm</span>
+                    <div className={styles.item}>
+                        <div className={`${styles.colorBox} ${styles.short}`}></div>
+                        <span>Net Comm</span>
                     </div>
-                    <div className="legendItem">
-                        <div className="colorBox" style={{ backgroundColor: '#3366ff' }}></div>
-                        <span className="label">Net Non Commercial</span>
+                    <div className={styles.item}>
+                        <div className={`${styles.colorBox} ${styles.long}`}></div>
+                        <span>Net Non Commercial</span>
                     </div>
                 </div>
-
                 <svg width={chartWidth} height={chartHeight}>
                     {gridLines.map((y, index) => (
                         <line
@@ -108,19 +106,7 @@ const NetPositionComparisonChart: React.FC = () => {
                             x2={padding.left + innerWidth}
                             y2={padding.top + y}
                             stroke="#333333"
-                            strokeWidth={0.5}
-                        />
-                    ))}
-
-                    {Array.from({ length: 24 }, (_, i) => (
-                        <line
-                            key={`v-grid-${i}`}
-                            x1={padding.left + (i / 22) * innerWidth}
-                            y1={padding.top}
-                            x2={padding.left + (i / 22) * innerWidth}
-                            y2={padding.top + innerHeight}
-                            stroke="#333333"
-                            strokeWidth={0.5}
+                            strokeWidth={2}
                         />
                     ))}
 

@@ -3,12 +3,13 @@ import styles from './CurrencyTab.module.scss';
 
 type CurrencyFundamentalTabProps = {
     text: TabName;
+    smallText?: string;
     border: "curve" | "rounded";
     isActive?: boolean;
     onClick: (tabName: TabName) => void;
 };
 
-export default function CurrencyTab({ text, border, isActive = false, onClick }: CurrencyFundamentalTabProps) {
+export default function CurrencyTab({ text, smallText, border, isActive = false, onClick }: CurrencyFundamentalTabProps) {
     return (
         <div
             className={`
@@ -18,7 +19,13 @@ export default function CurrencyTab({ text, border, isActive = false, onClick }:
             `}
             onClick={() => onClick(text)}
         >
-            <span className={styles.currencyTab__title}>{text}</span>
+            <span className={styles.currencyTab__title}>
+                {text}
+                {smallText ?
+                    <span className={styles.currencyTab__smallText}> {smallText}</span>
+                    : ''
+                }
+            </span>
         </div>
     );
 }

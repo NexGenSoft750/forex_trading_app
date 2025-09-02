@@ -13,33 +13,33 @@ export default function ScoreBoardMajorFundamentalTable() {
             <Table>
                 <Thead bgColor="#A4C1F4">
                     <Tr>
-                        <Th></Th>
-                        <Th>GDP ANNUAL</Th>
-                        <Th>SCORE</Th>
-                        <Th>Change</Th>
-                        <Th>SCORE</Th>
-                        <Th>GDP</Th>
-                        <Th>SCORE</Th>
-                        <Th>GDP CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>UNEMPLOYMENT</Th>
-                        <Th>SCORE</Th>
-                        <Th>UNEMPLOYMENT CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>INFLATION</Th>
-                        <Th>SCORE</Th>
-                        <Th>INFLATION CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>NFLATION MOM</Th>
-                        <Th>SCORE</Th>
-                        <Th>CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>INTEREST</Th>
-                        <Th>SCORE</Th>
-                        <Th>INTEREST CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>SUM</Th>
-                        <Th></Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4">GDP ANNUAL</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">Change</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">GDP</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">GDP CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">UNEMPLOYMENT</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">UNEMPLOYMENT CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">INFLATION</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">INFLATION CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">NFLATION MOM</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">INTEREST</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">INTEREST CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">SUM</Th>
+                        <Th bgColor="#A4C1F4"></Th>
                     </Tr>
                 </Thead>
                 <Tbody fullBorders>

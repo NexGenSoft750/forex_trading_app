@@ -11,7 +11,9 @@ export default function SeasonalityPanel() {
                 panelHeading="Seasonality"
             >
                 <SeasonalityPanelTable />
-                <USDSeasonalReturnsChart />
+                <div className={styles.seasonalityReturnsChartWrapper}>
+                    <USDSeasonalReturnsChart chartHeading='USD Seasonal Returns' />
+                </div>
                 <div className={styles.seasonalityPanelInfoSection}>
                     <CurrencyPanelContent>
                         <h1>How Seasonality Affects the USD:</h1>

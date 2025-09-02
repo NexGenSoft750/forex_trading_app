@@ -1,6 +1,6 @@
 import styles from './CurrencyPanelSection.module.scss';
 
-type Rounded =  'top' | 'full';
+type Rounded = 'top' | 'full';
 
 type CurrencyPanelSectionProps = {
     children: React.ReactNode;
@@ -11,8 +11,7 @@ type CurrencyPanelSectionProps = {
 export default function CurrencyPanelSection({ children, panelHeading, rounded = 'full' }: CurrencyPanelSectionProps) {
     const getRoundedClass = (rounded: Rounded): string =>
         styles[`panelSection__header--rounded-${rounded}`] || "";
-    
-     
+
     return (
         <>
             <div className={styles.panelSection}>

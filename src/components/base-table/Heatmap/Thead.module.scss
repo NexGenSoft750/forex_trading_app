@@ -13,4 +13,8 @@
     th:last-child {
         border-right: 3px solid var(--border-color);
     }
+
+    // th:not(:first-child) {
+    //     border-left: 3px solid var(--border-color) !important;
+    // }
 }

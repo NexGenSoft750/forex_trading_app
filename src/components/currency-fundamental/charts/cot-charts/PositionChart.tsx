@@ -34,9 +34,9 @@ const PositionChart: React.FC<PositionChart> = ({ data, title }) => {
 
                 <div className={styles.bars}>
                     {data.map((item, index) => {
-                        const totalHeight = ((item.long + item.short) / maxValue) * 300;
-                        const longHeight = (item.long / maxValue) * 300;
-                        const shortHeight = (item.short / maxValue) * 300;
+                        const totalHeight = ((item.long + item.short) / maxValue) * 200;
+                        const longHeight = (item.long / maxValue) * 200;
+                        const shortHeight = (item.short / maxValue) * 200;
 
                         return (
                             <div

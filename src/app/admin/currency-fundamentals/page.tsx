@@ -62,9 +62,10 @@ export default function CurrencyFundamentalsPage() {
                         onClick={handleTabClick}
                     />
                     <CurrencyTab
-                        text="USD ( Historical Data Basic Fundamentals )"
+                        text="USD"
+                        smallText="( Historical Data Basic Fundamentals )"
                         border="rounded"
-                        isActive={activeTab === "USD ( Historical Data Basic Fundamentals )"}
+                        isActive={activeTab === "USD"}
                         onClick={handleTabClick}
                     />
                     <CurrencyTab
@@ -74,9 +75,10 @@ export default function CurrencyFundamentalsPage() {
                         onClick={handleTabClick}
                     />
                     <CurrencyTab
-                        text="US Cot Data & Trends ( Weekly )"
+                        text="US Cot Data & Trends"
+                        smallText='( Weekly )'
                         border="rounded"
-                        isActive={activeTab === "US Cot Data & Trends ( Weekly )"}
+                        isActive={activeTab === "US Cot Data & Trends"}
                         onClick={handleTabClick}
                     />
                     <CurrencyTab

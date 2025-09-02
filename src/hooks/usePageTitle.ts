@@ -4,10 +4,13 @@ import { usePathname } from 'next/navigation';
 
 const ROUTE_TITLES: Record<string, string> = {
     '/admin': 'Dashboard',
+    '/admin/forex-heatmap': 'Forex Heatmap',
     '/admin/currency-fundamentals': 'Currency Fundamentals',
-    '/admin/fundamental-heatmap': 'Fundamental Heatmap',
+    '/admin/score-dashboard': 'Score Dashboard',
+    '/admin/cot-data-analysis': 'COT Data & Analysist',
     '/admin/portfolio-tracker': 'Portfolio Tracker',
-    '/admin/score-board': 'Score Board',
+    '/admin/retail-sentiment': 'Retail Sentiment',
+    '/admin/risk-mode': 'Risk On Off',
 };
 
 export function usePageTitle(): string {

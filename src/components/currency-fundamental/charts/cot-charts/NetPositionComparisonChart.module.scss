@@ -6,6 +6,7 @@
     align-items: center;
     font-family: Arial, sans-serif;
     padding: 2rem;
+    padding-bottom: 0;
     margin-top: 3rem;
 
     .chartContainer {
@@ -25,37 +26,35 @@
     }
 
     .legend {
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
         display: flex;
-        gap: 2rem;
+        justify-content: center;
         align-items: center;
-        margin-top: 1.5rem;
+        gap: 30px;
+        margin-top: 75px;
 
-        .legendItem {
+        .item {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 8px;
 
             .colorBox {
-                width: 1.8rem;
-                height: 1.6rem;
+                width: 15px;
+                height: 15px;
+                border-radius: 2px;
+
+                &.short {
+                    background-color: #ff6b6b;
+                }
+
+                &.long {
+                    background-color: #4dabf7;
+                }
             }
 
-            .label {
-                color: #fff;
-                font-size: 1.6rem;
-                font-weight: bold;
-                letter-spacing: 0.5px;
+            span {
+                font-size: 16px;
+                color: white;
             }
-        }
-
-        svg {
-            position: absolute;
-            top: 80px;
-            left: 0;
         }
     }
 }

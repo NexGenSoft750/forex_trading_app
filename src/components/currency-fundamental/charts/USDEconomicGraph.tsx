@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./USDEconomicGraph.module.scss";
 
 interface ChartProps {
+    id: string;
     data: { label: string; value: number }[];
     color: string;
     title: string;
@@ -11,12 +12,12 @@ interface ChartProps {
 
 export default function USDEconomicGraph() {
     const gdpData = [
-        { label: 'Q4\n2022', value: 2 },
-        { label: 'Q1\n2023', value: 1 },
-        { label: 'Q2\n2023', value: 3 },
-        { label: 'Q3\n2023', value: 4 },
-        { label: 'Q4\n2023', value: 5 },
-        { label: 'Q2\n2024', value: 6 },
+        { label: 'Q4\n2022', value: 2.0 },
+        { label: 'Q1\n2023', value: 1.0 },
+        { label: 'Q2\n2023', value: 3.0 },
+        { label: 'Q3\n2023', value: 4.0 },
+        { label: 'Q4\n2023', value: 5.0 },
+        { label: 'Q2\n2024', value: 6.0 },
         { label: 'Q3\n2024', value: 2.4 }
     ];
 
@@ -31,7 +32,6 @@ export default function USDEconomicGraph() {
         { label: 'Sep 2024', value: 5.0 },
         { label: 'Oct 2024', value: 4.6 },
         { label: 'Nov 2024', value: 4.6 },
-        { label: 'Dec 2024', value: 4.3 }
     ];
 
     const unemploymentData = [
@@ -45,8 +45,6 @@ export default function USDEconomicGraph() {
         { label: 'Sep 2024', value: 3.4 },
         { label: 'Oct 2024', value: 3.4 },
         { label: 'Nov 2024', value: 2.4 },
-        { label: 'Dec 2024', value: 2.4 },
-        { label: 'Dec 2024', value: 2.4 },
     ];
 
     const inflationData = [
@@ -60,23 +58,22 @@ export default function USDEconomicGraph() {
         { label: 'Sep 2024', value: 4 },
         { label: 'Oct 2024', value: 4 },
         { label: 'Nov 2024', value: 2.3 },
-        { label: 'Nov 2024', value: 2.3 },
-        { label: 'Dec 2024', value: 2.3 },
     ];
 
     const BarChart: React.FC<ChartProps> = ({
+        id,
         data,
         color,
         title,
         maxValue = 6,
         yAxisLabels
     }) => (
-        <div className={styles.chart}>
+        <div className={`${styles.chart} ${styles[id]}`}>
             <h2>{title}</h2>
             <div className={styles.chartArea}>
                 <div className={styles.yAxis}>
                     {yAxisLabels.map((value, index) => (
-                        <div key={index}>
+                        <div key={index} className={styles.yAxisLabel}>
                             <span>{value}</span>
                         </div>
                     ))}
@@ -129,6 +126,7 @@ export default function USDEconomicGraph() {
     return (
         <div className={styles.economicGraphContainer}>
             <BarChart
+                id="gdp-chart"
                 data={gdpData}
                 color="#22c55e"
                 title="GDP"
@@ -136,6 +134,7 @@ export default function USDEconomicGraph() {
                 yAxisLabels={[6, 4, 2, 0]}
             />
             <BarChart
+                id="interest-rate-chart"
                 data={interestRateData}
                 color="#3b82f6"
                 title="Interest Rate"
@@ -143,15 +142,17 @@ export default function USDEconomicGraph() {
                 yAxisLabels={[8, 6, 4, 2, 0]}
             />
             <BarChart
+                id="unemployment-chart"
                 data={unemploymentData}
-                color="#ef4444"
+                color="#FF0000"
                 title="Un employment"
                 maxValue={4}
                 yAxisLabels={[4, 3, 2, 1, 0]}
             />
             <BarChart
+                id="inflation-chart"
                 data={inflationData}
-                color="#eab308"
+                color="#FFFF00"
                 title="Inflation"
                 maxValue={5}
                 yAxisLabels={[5, 4, 3, 2, 1, 0]}

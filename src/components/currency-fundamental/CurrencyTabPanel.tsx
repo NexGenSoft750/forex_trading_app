@@ -12,19 +12,19 @@ type CurrencyTabPanelProps = {
 };
 
 export default function CurrencyTabPanel({ tabName }: CurrencyTabPanelProps) {
-    const currencyTabPanels: Record<TabName, React.ReactNode> = {
-        "USD &":                                      <USDPanel />,
-        "GBP":                                        <GBPPanel />,
-        "EUR":                                        <NoDataFoundPanel />,
-        "CAD":                                        <NoDataFoundPanel />,
-        "AUD":                                        <NoDataFoundPanel />,
-        "NZD":                                        <NoDataFoundPanel />,
-        "CHF":                                        <NoDataFoundPanel />,
-        "USD ( Historical Data Basic Fundamentals )": <USDHistoricalDataPanel />,
-        "Seasonality":                                <SeasonalityPanel />,
-        "US Cot Data & Trends ( Weekly )":            <USCOTDataPanel />,
-        "News":                                       <NoDataFoundPanel />,
-    };
+  const currencyTabPanels: Record<TabName, React.ReactNode> = {
+    "USD &":                <USDPanel />,
+    "GBP":                  <GBPPanel />,
+    "EUR":                  <NoDataFoundPanel />,
+    "CAD":                  <NoDataFoundPanel />,
+    "AUD":                  <NoDataFoundPanel />,
+    "NZD":                  <NoDataFoundPanel />,
+    "CHF":                  <NoDataFoundPanel />,
+    "USD":                  <USDHistoricalDataPanel />,
+    "Seasonality":          <SeasonalityPanel />,
+    "US Cot Data & Trends": <USCOTDataPanel />,
+    "News":                 <NoDataFoundPanel />,
+  };
 
   const activeTabPanel = currencyTabPanels[tabName] ?? <NoDataFoundPanel />;
 

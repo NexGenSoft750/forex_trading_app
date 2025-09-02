@@ -2,9 +2,14 @@ import { NavItem } from "@/types/NavItem";
 
 const NAV_ITEMS: NavItem[] = [
     {
-        key: "fundamental-heatmap",
-        label: "Fundamental Heatmap",
-        href: "/admin/fundamental-heatmap"
+        key: "forex heatmap ",
+        label: "Forex Heatmap",
+        href: "/admin/forex-heatmap"
+    },
+    {
+        key: "FX Analyzer Pro",
+        label: "FX Analyzer Pro",
+        href: "/admin/fx-analyzer-pro"
     },
     {
         key: "currency-fundamentals",
@@ -12,24 +17,24 @@ const NAV_ITEMS: NavItem[] = [
         href: "/admin/currency-fundamentals"
     },
     {
-        key: "score-board",
-        label: "Score Board",
-        href: "/admin/score-board"
+        key: "Score Dashboard",
+        label: "Score Dashboard",
+        href: "/admin/score-dashboard"
     },
     {
-        key: "cot-report",
-        label: "Cot Report",
-        href: "/admin/cot-report"
+        key: "Edge Tools & Alerts",
+        label: "Edge Tools & Alerts",
+        href: "/admin/edge-tools-alerts"
     },
     {
-        key: "seasonality",
-        label: "Seasonality",
-        href: "/admin/seasonality"
+        key: "COT Data & Analysis",
+        label: "COT Data & Analysist",
+        href: "/admin/cot-data-analysis"
     },
     {
-        key: "events-calendar",
-        label: "Events Calendar",
-        href: "/admin/events-calendar"
+        key: "Seasonal Trends",
+        label: "Seasonal Trends",
+        href: "/admin/seasonal-trends"
     },
     {
         key: "retail-sentiment",
@@ -37,29 +42,19 @@ const NAV_ITEMS: NavItem[] = [
         href: "/admin/retail-sentiment"
     },
     {
-        key: "calculator",
-        label: "Calculator",
-        href: "/admin/calculator"
+        key: "risk-mode",
+        label: "Risk Mode",
+        href: "/admin/risk-mode"
     },
     {
-        key: "trading-alerts",
-        label: "Trading Alerts",
-        href: "/admin/trading-alerts"
-    },
-    {
-        key: "education",
-        label: "Education",
-        href: "/admin/education"
+        key: "Calendar & News",
+        label: "Calendar & News",
+        href: "/admin/calendar-news"
     },
     {
         key: "portfolio-tracker",
         label: "Trading Journal",
         href: "/admin/portfolio-tracker"
-    },
-    {
-        key: "risk-mode",
-        label: "Risk Mode",
-        href: "/admin/risk-mode"
     },
 ];
 

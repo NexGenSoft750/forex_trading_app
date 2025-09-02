@@ -5,8 +5,8 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 const pieData = [
   { name: "Crypto", value: 25, color: "#FF0000" },
-  { name: "Cash", value: 6, color: "#FFC107" }, 
-  { name: "Stocks", value: 69, color: "#4CAF50" }, 
+  { name: "Cash", value: 6, color: "#FFC107" },
+  { name: "Stocks", value: 69, color: "#4CAF50" },
 ];
 
 export default function PortfolioPieChart() {
@@ -27,7 +27,7 @@ export default function PortfolioPieChart() {
             paddingAngle={0}
             dataKey="value"
             label={({ percent = 0 }) => `${(percent * 100).toFixed(1)}%`}
-            stroke="none" 
+            stroke="none"
           >
             {pieData.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />

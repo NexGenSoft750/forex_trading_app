@@ -7,6 +7,7 @@ type TdProps = {
     bold?: boolean;
     color?: string;
     bgColor?: string;
+    borderColor?: string;
     colSpan?: number;
     rowSpan?: number;
     fontSize?: 'small' | 'large';
@@ -22,6 +23,7 @@ export default function Td({
     fontSize = 'large',
     color = "#000000",
     bgColor = "#ffffff",
+    borderColor,
     textDecoration = 'default',
 }: TdProps) {
     const getTdClasses = (): string => [
@@ -38,6 +40,7 @@ export default function Td({
                     ...style,
                     color: color,
                     backgroundColor: bgColor,
+                    border: `3px solid ${borderColor}`,
                 }}
                 colSpan={colSpan}
                 rowSpan={rowSpan}

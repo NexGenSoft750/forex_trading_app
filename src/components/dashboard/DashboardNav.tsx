@@ -21,10 +21,10 @@ export default function DashboardNav() {
     <nav className={styles["dashboard-nav"]}>
       <ul className={styles["dashboard-nav__container"]}>
         {NAV_ITEMS.map(({ key, label, href }) => (
-          <div key={key} className={styles["dashboard-nav__wrapper"]}>
-            <li className={styles["dashboard-nav__item"]}>
+          <div key={key} className={`${styles["dashboard-nav__wrapper"]} ${getActiveLinkClass(href)}`}>
+            <li className={`${styles["dashboard-nav__item"]} ${getActiveLinkClass(href)}`}>
               <Link
-                className={`${styles["dashboard-nav__link"]} ${getActiveLinkClass(href)}`}
+                className={styles["dashboard-nav__link"]}
                 href={href}
               >
                 {label}

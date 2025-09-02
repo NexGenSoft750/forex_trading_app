@@ -6,7 +6,7 @@ export type TabName =
   | "AUD"
   | "NZD"
   | "CHF"
-  | "USD ( Historical Data Basic Fundamentals )"
+  | "USD"
   | "Seasonality"
-  | "US Cot Data & Trends ( Weekly )"
+  | "US Cot Data & Trends"
   | "News";

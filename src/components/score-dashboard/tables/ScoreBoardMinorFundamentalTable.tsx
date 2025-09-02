@@ -13,20 +13,20 @@ export default function ScoreBoardMinorFundamentalTable() {
             <Table>
                 <Thead bgColor="#A4C1F4">
                     <Tr>
-                        <Th></Th>
-                        <Th>PMI-S</Th>
-                        <Th>SCORE</Th>
-                        <Th>PMI-M</Th>
-                        <Th>SCORE</Th>
-                        <Th>RETAIL SALES</Th>
-                        <Th>SCORE</Th>
-                        <Th>CHANGE</Th>
-                        <Th>SCORE</Th>
-                        <Th>CCI Change</Th>
-                        <Th>SCORE</Th>
-                        <Th>BUSINESS CONFIDENCE</Th>
-                        <Th>SCORE</Th>
-                        <Th>SUM</Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4">PMI-S</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">PMI-M</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">RETAIL SALES</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">CHANGE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">CCI Change</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">BUSINESS CONFIDENCE</Th>
+                        <Th bgColor="#A4C1F4">SCORE</Th>
+                        <Th bgColor="#A4C1F4">SUM</Th>
                     </Tr>
                 </Thead>
                 <Tbody fullBorders>

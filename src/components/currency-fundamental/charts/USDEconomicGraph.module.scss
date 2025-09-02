@@ -2,14 +2,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 24px;
+    overflow: hidden;
 }
-
 
 .chart {
     background-color: #000000;
     padding: 24px;
     border-radius: 8px;
-    min-height: 425px;
+    min-height: 37rem;
 
     h2 {
         color: #ffffff;
@@ -21,7 +21,7 @@
 
     .chartArea {
         position: relative;
-        height: 256px;
+        height: 20rem;
     }
 
     .yAxis {
@@ -34,11 +34,20 @@
         justify-content: space-between;
         color: #ffffff;
         font-size: 14px;
+        z-index: 2;
 
-        span {
-            position: absolute;
-            left: -8px;
-            transform: translateY(-50%);
+        .yAxisLabel {
+            position: relative;
+            height: 0;
+
+            span {
+                position: absolute;
+                left: -8px;
+                transform: translateY(-50%);
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 400;
+            }
         }
     }
 
@@ -48,6 +57,7 @@
         top: 0;
         right: 0;
         height: 100%;
+        z-index: 1;
 
         .line {
             position: absolute;
@@ -65,6 +75,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        z-index: 3;
 
         .barWrapper {
             display: flex;
@@ -87,6 +98,7 @@
                     width: 80%;
                     border-radius: 10px 10px 0 0;
                     position: relative;
+                    min-height: 20px;
 
                     .value {
                         position: absolute;
@@ -94,9 +106,9 @@
                         left: 50%;
                         transform: translateX(-50%);
                         color: #ffffff;
-                        font-size: 16px;
-                        font-weight: bold;
+                        font-size: 1.25rem;
                         white-space: nowrap;
+                        z-index: 4;
                     }
                 }
             }
@@ -111,26 +123,45 @@
         display: flex;
         justify-content: space-between;
 
+
         .labelWrapper {
             flex: 1;
             text-align: center;
-            margin: 0 -4px;
+            margin: 0 0px;
+            max-width: 60px;
 
             .label {
                 color: #ffffff;
-                font-size: 12px;
+                font-size: 10px;
                 display: inline-block;
                 transform-origin: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
 
                 &.gdp {
                     white-space: pre-line;
                     transform: none;
+                    line-height: 1.2;
+                    font-size: 11px;
                 }
 
                 &.rotated {
                     white-space: nowrap;
                     transform: rotate(-45deg);
+                    font-size: 10px;
                 }
+            }
+        }
+    }
+}
+
+.inflation-chart {
+    .barContainer {
+        .bar {
+            .value {
+                color: #000000 !important;
             }
         }
     }

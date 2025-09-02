@@ -1,13 +1,12 @@
 .td {
     color: #000000;
     padding: 1.2rem 1.8rem;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: center;
     border-bottom: 3px solid #C0B7B7;
-    border-right: 3px solid #C0B7B7;
+    border-left: 3px solid #C0B7B7;
     vertical-align: middle;
-    margin: unset !important;
     outline: unset !important;
     background-image: unset !important;
     background-repeat: unset !important;
@@ -16,9 +15,9 @@
     white-space: nowrap;
 }
 
-.td:not(:last-child) {
-    border-right: 3px solid #C0B7B7;
-}
+// .td:not(:last-child) {
+//     border-right: 3px solid #C0B7B7;
+// }
 
 .td--small-text {
     font-size: 1.4rem;

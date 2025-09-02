@@ -1,0 +1,27 @@
+.riskModeSummaryContainer {
+    display: flex;
+    gap: 3rem;
+
+    .riskModeSummaryTable {
+        width: 40%;
+    }
+
+    .riskModeSummaryChart {
+        width: 60%;
+    }
+}
+
+.guageChartWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    align-items: center;
+    justify-content: center;
+
+    .guageChartTitle {
+        color: #000000;
+        font-weight: 600;
+        font-size: 4.6rem;
+    }
+
+}

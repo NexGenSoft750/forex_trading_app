@@ -1,3 +1,4 @@
+import RetailSentimentLayout from "@/app/admin/retail-sentiment/layout";
 import type { Metadata } from "next";
 
 interface MetadataConfig {
@@ -96,6 +97,34 @@ export const commonMetadata = {
         description: "Comprehensive trading scoreboard displaying performance metrics, currency scores, market sentiment, and key economic insights in real time",
         keywords: ["scoreboard", "trading performance", "currency strength", "market sentiment", "economic insights"],
         path: "/admin/score-board",
+    }),
+
+    cotReport: generateMetadata({
+        title: "COT Report",
+        description: "Detailed Commitment of Traders (COT) report providing insights into trader positions, market trends, and institutional sentiment across major asset classes",
+        keywords: [
+            "COT report",
+            "Commitment of Traders",
+            "market trends",
+            "institutional sentiment",
+            "trader positions",
+            "futures data"
+        ],
+        path: "/admin/cot-report",
+    }),
+
+    retailSentiment: generateMetadata({
+        title: "Retail Sentiment",
+        description: "Comprehensive retail sentiment data showing the behavior, positioning, and confidence levels of retail traders across major markets and asset classes.",
+        keywords: [
+            "retail sentiment",
+            "trader sentiment",
+            "market psychology",
+            "retail positioning",
+            "trading behavior",
+            "investor confidence"
+        ],
+        path: "/admin/retail-sentiment",
     }),
 
     portfolioTracker: generateMetadata({

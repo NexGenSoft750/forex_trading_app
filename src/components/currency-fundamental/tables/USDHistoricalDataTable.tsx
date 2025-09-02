@@ -9,16 +9,16 @@ export default function USDHistoricalDataTable() {
     return (
         <>
             <Table cellPadding='large'>
-                <Thead bgColor="#A4C1F4">
+                <Thead>
                     <Tr>
-                        <Th colSpan={2}>GDP</Th>
-                        <Th></Th>
-                        <Th colSpan={2}>INTEREST RATE</Th>
-                        <Th></Th>
-                        <Th colSpan={2}>INFLATION</Th>
-                        <Th></Th>
-                        <Th colSpan={2}>UNEMPLOYMENT</Th>
-                        <Th></Th>
+                        <Th bgColor="#A4C1F4" colSpan={2}>GDP</Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4" colSpan={2}>INTEREST RATE</Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4" colSpan={2}>INFLATION</Th>
+                        <Th bgColor="#A4C1F4"></Th>
+                        <Th bgColor="#A4C1F4" colSpan={2}>UNEMPLOYMENT</Th>
+                        <Th bgColor="#A4C1F4"></Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -36,7 +36,6 @@ export default function USDHistoricalDataTable() {
                         <Td bold>Value</Td>
                         <Td bold>Change</Td>
                     </Tr>
-
                     <Tr>
                         <Td>Q1 2023</Td>
                         <Td>2.8</Td>

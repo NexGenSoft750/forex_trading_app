@@ -1,8 +1,8 @@
 import styles from './scoreBoard.module.scss';
-import ScoreBoardFundamentalDataTable from '@/components/score-board/tables/ScoreBoardFundamentalDataTable';
-import ScoreBoardMainTable from "@/components/score-board/tables/ScoreBoardMainTable";
-import ScoreBoardMajorFundamentalTable from '@/components/score-board/tables/ScoreBoardMajorFundamentalTable';
-import ScoreBoardMinorFundamentalTable from '@/components/score-board/tables/ScoreBoardMinorFundamentalTable';
+import ScoreBoardFundamentalDataTable from '@/components/score-dashboard/tables/ScoreBoardFundamentalDataTable';
+import ScoreBoardMainTable from "@/components/score-dashboard/tables/ScoreBoardMainTable";
+import ScoreBoardMajorFundamentalTable from '@/components/score-dashboard/tables/ScoreBoardMajorFundamentalTable';
+import ScoreBoardMinorFundamentalTable from '@/components/score-dashboard/tables/ScoreBoardMinorFundamentalTable';
 
 export default function ScoreBoardPage() {
     return (
@@ -17,7 +17,7 @@ export default function ScoreBoardPage() {
                         <ScoreBoardMajorFundamentalTable />
                     </div>
                     <div>
-                        <ScoreBoardMinorFundamentalTable/>
+                        <ScoreBoardMinorFundamentalTable />
                     </div>
                 </div>
             </div>

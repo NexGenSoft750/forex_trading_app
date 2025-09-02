@@ -1,0 +1,48 @@
+.chart-container {
+    width: 100%;
+    margin: 0 auto;
+    font-family: system-ui, sans-serif;
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+        letter-spacing: 1px;
+    }
+
+    svg {
+        .grid-line {
+            stroke: #333;
+            stroke-width: 1;
+        }
+
+        .y-label {
+            font-size: 14px;
+            fill: black;
+        }
+
+        .y-tick {
+            font-size: 13px;
+            fill: black;
+            text-anchor: end;
+            alignment-baseline: middle;
+        }
+
+        .line-path {
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .point {
+            r: 4;
+        }
+
+        .x-label {
+            font-size: 10px;
+            fill: black;
+            text-anchor: end;
+        }
+    }
+}

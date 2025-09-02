@@ -8,22 +8,27 @@ import Td from '@/components/base-table/Heatmap/Td';
 export default function CurrencyFundamentalTable() {
     return (
         <Table>
-            <Thead bgColor='#01C519'>
+            <Thead>
                 <Tr>
-                    <Th></Th>
-                    <Th>Latest</Th>
-                    <Th>Previous</Th>
-                    <Th>Change</Th>
-                    <Th>Highest</Th>
-                    <Th>Lowest</Th>
-                    <Th></Th>
-                    <Th></Th>
-                    <Th>Q1/25</Th>
-                    <Th>Q2/25</Th>
-                    <Th>Q3/25</Th>
-                    <Th>Q4/25</Th>
-                    <Th>Threshhold Value</Th>
-                    <Th>Score</Th>
+                    <Th bgColor='#01C519' rowSpan={2}></Th>
+                    <Th bgColor='#01C519' rowSpan={2}>Latest</Th>
+                    <Th bgColor='#01C519' rowSpan={2}>Previous</Th>
+                    <Th bgColor='#01C519' rowSpan={2}>Change</Th>
+                    <Th bgColor='#01C519' rowSpan={2}>Highest</Th>
+                    <Th bgColor='#01C519' rowSpan={2}>Lowest</Th>
+                    <Th bgColor='#01C519' rowSpan={2}></Th>
+                    <Th bgColor='#01C519' rowSpan={2}></Th>
+                    <Th bgColor='#01C519' colSpan={4}>Forecast</Th>
+                    <Th bgColor='#01C519' colSpan={1}>Threshold Value</Th>
+                    <Th bgColor='#01C519' colSpan={1}>Score</Th>
+                </Tr>
+                <Tr>
+                    <Th bgColor='#01C519' borderColor='#ffffff'>Q1/25</Th>
+                    <Th bgColor='#01C519' borderColor='#ffffff'>Q2/25</Th>
+                    <Th bgColor='#01C519' borderColor='#ffffff'>Q3/25</Th>
+                    <Th bgColor='#01C519' borderColor='#ffffff'>Q4/25</Th>
+                    <Th bgColor='#01C519' borderColor='#ffffff'></Th>
+                    <Th bgColor='#01C519' borderColor='#ffffff'></Th>
                 </Tr>
             </Thead>
             <Tbody>
