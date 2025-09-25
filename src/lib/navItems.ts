@@ -2,60 +2,79 @@ import { NavItem } from "@/types/NavItem";
 
 const NAV_ITEMS: NavItem[] = [
     {
-        key: "forex heatmap ",
+        key: "forex-heatmap",
         label: "Forex Heatmap",
-        href: "/admin/forex-heatmap"
+        href: "forex-heatmap",
+        order: 1
     },
     {
-        key: "FX Analyzer Pro",
+        key: "fx-analyzer-pro",
         label: "FX Analyzer Pro",
-        href: "/admin/fx-analyzer-pro"
+        href: "fx-analyzer-pro",
+        order: 2
+    },
+    {
+        key: "score-dashboard",
+        label: "Score Dashboard",
+        href: "score-dashboard",
+        order: 3
+    },
+    {
+        key: "edge-tools-alerts",
+        label: "Edge Tools & Alerts",
+        href: "edge-tools-alerts",
+        order: 4
     },
     {
         key: "currency-fundamentals",
         label: "Currency Fundamentals",
-        href: "/admin/currency-fundamentals"
+        href: "currency-fundamentals",
+        order: 5
     },
     {
-        key: "Score Dashboard",
-        label: "Score Dashboard",
-        href: "/admin/score-dashboard"
+        key: "cot-data-analysis",
+        label: "COT Data & Analysis",
+        href: "cot-data-analysis",
+        order: 6
     },
     {
-        key: "Edge Tools & Alerts",
-        label: "Edge Tools & Alerts",
-        href: "/admin/edge-tools-alerts"
-    },
-    {
-        key: "COT Data & Analysis",
-        label: "COT Data & Analysist",
-        href: "/admin/cot-data-analysis"
-    },
-    {
-        key: "Seasonal Trends",
+        key: "seasonal-trends",
         label: "Seasonal Trends",
-        href: "/admin/seasonal-trends"
+        href: "seasonal-trends",
+        order: 7
     },
     {
         key: "retail-sentiment",
         label: "Retail Sentiment",
-        href: "/admin/retail-sentiment"
+        href: "retail-sentiment",
+        order: 8
     },
     {
         key: "risk-mode",
         label: "Risk Mode",
-        href: "/admin/risk-mode"
+        href: "risk-mode",
+        order: 9
     },
     {
-        key: "Calendar & News",
+        key: "calendar-news",
         label: "Calendar & News",
-        href: "/admin/calendar-news"
+        href: "calendar-news",
+        order: 10
     },
     {
         key: "portfolio-tracker",
         label: "Trading Journal",
-        href: "/admin/portfolio-tracker"
+        href: "portfolio-tracker",
+        order: 11
+    },
+    {
+        key: "education",
+        label: "Education",
+        href: "education",
+        order: 12,
     },
 ];
 
-export default NAV_ITEMS;
+const SORTED_NAV_ITEMS = NAV_ITEMS.sort((a, b) => a.order - b.order);
+
+export default SORTED_NAV_ITEMS;

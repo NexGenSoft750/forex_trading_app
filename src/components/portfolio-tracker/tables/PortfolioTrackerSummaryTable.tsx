@@ -1,7 +1,4 @@
-import Table from "@/components/base-table/Heatmap/Table";
-import Tbody from "@/components/base-table/Heatmap/Tbody";
-import Td from "@/components/base-table/Heatmap/Td";
-import Tr from "@/components/base-table/Heatmap/Tr";
+import { Table, Tbody, Td, Tr } from "@/components/base-table";
 import TableHeader from '@/components/base-table/TableHeader';
 
 export default function PortfolioTrackerSummaryTable() {
