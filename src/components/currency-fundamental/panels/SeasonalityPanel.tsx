@@ -2,7 +2,7 @@ import styles from './SeasonalityPanel.module.scss';
 import CurrencyPanelSection from "../CurrencyPanelSection";
 import SeasonalityPanelTable from '../tables/SeasonalityPanelTable';
 import USDSeasonalReturnsChart from '../charts/USDSeasonalReturnsChart';
-import CurrencyPanelContent from '../CurrencyPanelContent';
+import TextPanel from '@/components/ui/TextPanel';
 
 export default function SeasonalityPanel() {
     return (
@@ -15,12 +15,12 @@ export default function SeasonalityPanel() {
                     <USDSeasonalReturnsChart chartHeading='USD Seasonal Returns' />
                 </div>
                 <div className={styles.seasonalityPanelInfoSection}>
-                    <CurrencyPanelContent>
+                    <TextPanel>
                         <h1>How Seasonality Affects the USD:</h1>
                         <p>USD strength often fluctuates based on seasonal trends like tax payments, corporate earnings, and
                             holiday spending. Certain months see increased demand for the USD, while others experience
                             weakness due to capital outflows and global trade patterns.</p>
-                    </CurrencyPanelContent>
+                    </TextPanel>
                 </div>
             </CurrencyPanelSection>
         </>

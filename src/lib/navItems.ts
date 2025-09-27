@@ -20,9 +20,9 @@ const NAV_ITEMS: NavItem[] = [
         order: 3
     },
     {
-        key: "edge-tools-alerts",
+        key: "edge-tools-and-alerts",
         label: "Edge Tools & Alerts",
-        href: "edge-tools-alerts",
+        href: "edge-tools-and-alerts",
         order: 4
     },
     {

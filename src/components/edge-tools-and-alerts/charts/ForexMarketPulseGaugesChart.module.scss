@@ -1,0 +1,15 @@
+.forexMarketPulseGaugesChart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #F5F5F5;
+    padding: 5rem 1.5rem;
+
+    .guageChartWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+    }
+}

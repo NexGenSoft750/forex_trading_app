@@ -186,7 +186,7 @@ export function Th({
     className,
     style,
     color = '#000000',
-    bgColor = "#ffffff",
+    bgColor = "",
     borderColor,
     colSpan = 1,
     rowSpan = 1,

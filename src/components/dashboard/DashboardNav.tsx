@@ -5,8 +5,7 @@ import styles from "./DashboardNav.module.scss";
 import RightArrow from "./RightArrow";
 import { usePathname } from "next/navigation";
 import SORTED_NAV_ITEMS from "@/lib/navItems";
-
-const URL_PREFIX = process.env.NEXT_PUBLIC_URL_PREFIX || "/admin";
+import { getFullPath } from "@/helper/path";
 
 export default function DashboardNav() {
   const currentPath = usePathname();
@@ -23,7 +22,7 @@ export default function DashboardNav() {
     <nav className={styles["dashboard-nav"]}>
       <ul className={styles["dashboard-nav__container"]}>
         {SORTED_NAV_ITEMS.map(({ key, label, href }) => {
-          const fullPath = `${URL_PREFIX}/${href}`;
+          const fullPath = getFullPath(href);
 
           return (
             <div key={key} className={`${styles["dashboard-nav__wrapper"]} ${getActiveLinkClass(fullPath)}`}>

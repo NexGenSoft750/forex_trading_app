@@ -2,7 +2,7 @@ import styles from './USDHistoricalDataPanel.module.scss';
 import CurrencyPanelSection from "../CurrencyPanelSection";
 import USDHistoricalDataTable from '../tables/USDHistoricalDataTable';
 import USDEconomicGraph from '../charts/USDEconomicGraph';
-import CurrencyPanelContent from '../CurrencyPanelContent';
+import TextPanel from '@/components/ui/TextPanel';
 
 export default function USDHistoricalDataPanel() {
     return (
@@ -14,7 +14,7 @@ export default function USDHistoricalDataPanel() {
                 <USDHistoricalDataTable />
                 <div className={styles.panelBody}>
                     <USDEconomicGraph />
-                    <CurrencyPanelContent style={{ marginTop: "3rem" }}>
+                    <TextPanel style={{ marginTop: "3rem" }}>
                         <h1>How Basic Fundamentals Affect the USD:</h1>
                         <ul className={styles.basicFundamentalsList}>
                             <li className={styles.basicFundamentalsList__item}>
@@ -38,7 +38,7 @@ export default function USDHistoricalDataPanel() {
                                 <p>Surpluses strengthen the USD: deficits weaken it.</p>
                             </li>
                         </ul>
-                    </CurrencyPanelContent>
+                    </TextPanel>
                 </div>
             </CurrencyPanelSection>
         </>

@@ -1,8 +1,8 @@
 import { commonMetadata } from "@/lib/metadata";
 
-export const metadata = commonMetadata.fundamentalHeatmap;
+export const metadata = commonMetadata.forexHeatmap;
 
-export default function FundamentalHeatmapLayout({
+export default function ForexHeatmapLayout({
     children,
 }: {
     children: React.ReactNode;

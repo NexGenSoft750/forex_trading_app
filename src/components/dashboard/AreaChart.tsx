@@ -235,7 +235,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
                 {highlightedValue && highlightedMonth && (
                     <div style={{
                         position: 'absolute',
-                        top: '700px;',
+                        top: '700px',
                         left: '52%',
                         backgroundColor: '#000',
                         color: '#fff',

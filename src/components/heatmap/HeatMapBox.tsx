@@ -6,10 +6,11 @@ import HeatMapModal from "./HeatMapModal";
 
 type HeatMapBoxProps = {
     bgColor?: string;
+    text: string;
     textColor?: string;
 }
 
-function HeatMapBox({ bgColor = "#12ad2b", textColor = 'white' }: HeatMapBoxProps) {
+function HeatMapBox({ bgColor = "#12ad2b", text, textColor = 'white' }: HeatMapBoxProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleModalOpen = () => {
@@ -28,7 +29,7 @@ function HeatMapBox({ bgColor = "#12ad2b", textColor = 'white' }: HeatMapBoxProp
                 style={{ backgroundColor: bgColor, color: textColor }}
                 onClick={handleModalOpen}
             >
-                <p>USDCAD</p>
+                <p>{text}</p>
                 <p>-2.7%</p>
             </div>
         </>
