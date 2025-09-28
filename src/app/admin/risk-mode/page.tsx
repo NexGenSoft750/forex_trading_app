@@ -3,6 +3,7 @@ import RiskModeCurrentlyPairTable from '@/components/risk-mode/tables/RiskModeCu
 import GuageChart from '@/components/chart/GuageChart';
 import CurrencyPanelContent from '@/components/currency-fundamental/CurrencyPanelContent';
 import RiskModeSummaryTable from '@/components/risk-mode/tables/RiskModeSummaryTable';
+import TrendAlignmentScore from '@/components/chart/TrendAlignmentScore';
 
 export default function RiskModePage() {
     return (
@@ -24,6 +25,9 @@ export default function RiskModePage() {
                     </div>
                 </div>
                 <div>
+                    <div className={styles.trendAlignmentContainer}>
+                        <TrendAlignmentScore />
+                    </div>
                     <RiskModeCurrentlyPairTable />
                     <CurrencyPanelContent light>
                         <h1>Risk On / Off</h1>
