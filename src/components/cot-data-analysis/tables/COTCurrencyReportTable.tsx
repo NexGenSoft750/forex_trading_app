@@ -1,9 +1,4 @@
-import Table from '@/components/base-table/Heatmap/Table';
-import Thead from '@/components/base-table/Heatmap/Thead';
-import Th from '@/components/base-table/Heatmap/Th';
-import Tr from '@/components/base-table/Heatmap/Tr';
-import Tbody from '@/components/base-table/Heatmap/Tbody';
-import Td from '@/components/base-table/Heatmap/Td';
+import { Table, Thead, Th, Tr, Tbody, Td } from '@/components/base-table';
 
 export default function COTCurrencyReportTable() {
     const rows = [

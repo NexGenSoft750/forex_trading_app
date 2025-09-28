@@ -1,0 +1,197 @@
+.tableContainer {
+    width: 100%;
+    background: #fafafa;
+    overflow-x: auto;
+    overflow-y: visible;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 1.2rem;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+
+        &:hover {
+            background: #94a3b8;
+        }
+    }
+
+    // Firefox scrollbar
+    scrollbar-width: auto;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.table {
+    width: 100%;
+    min-width: 1400px;
+    border-collapse: separate;
+    border-spacing: 1rem;
+    background: transparent;
+}
+
+.headerRow {
+    background: transparent;
+}
+
+.headerCell {
+    padding: 1.4rem 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #3F623A;
+    white-space: nowrap;
+    background: #D9F2D6;
+    border: 2px solid #B7E0B2;
+    border-radius: 1rem;
+    box-shadow: none;
+}
+
+.selectHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #374151;
+    }
+}
+
+.dataRow {
+    background: transparent;
+}
+
+.dataCell {
+    white-space: nowrap;
+    padding: 0.8rem 3rem;
+    font-size: 1.5rem;
+    color: #374151;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #E5E7EB;
+    border-radius: 1rem;
+}
+
+/* ensure cells vertically center inline content */
+.table th,
+.table td {
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.checkboxDataCell {
+    border: none;
+    padding: 0 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+    width: 72px;
+}
+
+.checkboxWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.checkbox {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    accent-color: #059669;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.actionsContainer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.editButton {
+    background: #ef4444;
+    color: #ffffff;
+
+    &:hover {
+        background: #dc2626;
+    }
+}
+
+.deleteButton {
+    background: #ef4444;
+    color: #ffffff;
+
+    &:hover {
+        background: #dc2626;
+    }
+}
+
+.viewButton {
+    background: #ef4444;
+    color: #ffffff;
+
+    &:hover {
+        background: #dc2626;
+    }
+}
+
+// Responsive design
+@media (max-width: 1200px) {
+
+    .headerCell,
+    .dataCell {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tableContainer {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 1200px;
+    }
+
+    .headerCell,
+    .dataCell {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .actionButton {
+        width: 32px;
+        height: 32px;
+    }
+}

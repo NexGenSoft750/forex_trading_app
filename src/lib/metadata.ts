@@ -1,4 +1,4 @@
-import RetailSentimentLayout from "@/app/admin/retail-sentiment/layout";
+import { getBasePath, getFullPath } from "@/helper/path";
 import type { Metadata } from "next";
 
 interface MetadataConfig {
@@ -19,7 +19,8 @@ export function generateMetadata({
     noIndex = false,
 }: MetadataConfig): Metadata {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://forex-admin.com";
-    const fullUrl = `${baseUrl}${path}`;
+    const fullPath = path === '/' ? getBasePath() : getFullPath(path);
+    const fullUrl = `${baseUrl}${fullPath}`;
 
     const defaultKeywords = ["forex", "trading", "admin", "dashboard", "analytics"];
     const allKeywords = [...defaultKeywords, ...keywords];
@@ -69,34 +70,98 @@ export function generateMetadata({
     };
 }
 
-// Pre-defined metadata for common pages
 export const commonMetadata = {
     dashboard: generateMetadata({
         title: "Dashboard Overview",
         description: "Comprehensive overview of forex trading metrics, analytics, and key performance indicators for administrative management",
-        keywords: ["dashboard", "overview", "analytics", "metrics", "KPIs"],
-        path: "/admin",
+        keywords: [
+            "dashboard",
+            "overview",
+            "analytics",
+            "metrics",
+            "KPIs",
+        ],
+        path: "/",
     }),
 
-    fundamentalHeatmap: generateMetadata({
-        title: "Fundamental Heatmap",
-        description: "Advanced fundamental analysis heatmap displaying real-time market sentiment, economic indicators, and trading opportunities",
-        keywords: ["fundamental analysis", "heatmap", "market sentiment", "economic indicators", "currency pairs"],
-        path: "/admin/fundamental-heatmap",
+    users: generateMetadata({
+        title: "Users Management",
+        description: "Manage users, roles, and permissions with full control over access and settings.",
+        keywords: [
+            "user management",
+            "admin users",
+            "role-based access",
+            "user accounts",
+            "permissions",
+        ],
+        path: "users",
     }),
 
-    currencyFundamental: generateMetadata({
-        title: "Currency Fundamental",
-        description: "Currency fundamental analysis heatmap displaying real-time market sentiment, economic indicators, and trading opportunities",
-        keywords: ["currency fundamental", "heatmap", "market sentiment", "economic indicators", "currency pairs"],
-        path: "/admin/currency-fundamental",
+    forexHeatmap: generateMetadata({
+        title: "Forex Heatmap",
+        description: "Visualize real-time forex market strength with a dynamic heatmap showing currency performance, sentiment, and trading opportunities across major pairs.",
+        keywords: [
+            "forex heatmap",
+            "currency strength",
+            "forex market analysis",
+            "trading opportunities",
+            "real-time forex",
+            "market sentiment",
+        ],
+        path: "forex-heatmap",
+    }),
+
+    fxAnalyzerPro: generateMetadata({
+        title: "FX Analyzer Pro",
+        description: "Monitor and analyze foreign exchange trends and trading activities with precision tools.",
+        keywords: [
+            "forex analysis",
+            "fx trading",
+            "market trends",
+            "financial analytics",
+            "trading insights",
+        ],
+        path: "fx-analyzer-pro",
     }),
 
     scoreBoard: generateMetadata({
         title: "Scoreboard",
         description: "Comprehensive trading scoreboard displaying performance metrics, currency scores, market sentiment, and key economic insights in real time",
-        keywords: ["scoreboard", "trading performance", "currency strength", "market sentiment", "economic insights"],
-        path: "/admin/score-board",
+        keywords: [
+            "scoreboard",
+            "trading performance",
+            "currency strength",
+            "market sentiment",
+            "economic insights",
+        ],
+        path: "score-board",
+    }),
+
+    edgeToolsAndAlerts: generateMetadata({
+        title: "Edge Tools & Alerts",
+        description: "Monitor, manage, and optimize your edge tools with real-time alerts and smart insights.",
+        keywords: [
+            "edge tools",
+            "alerts",
+            "real-time monitoring",
+            "system notifications",
+            "infrastructure management",
+            "edge computing",
+        ],
+        path: "edge-tools-and-alerts",
+    }),
+
+    currencyFundamental: generateMetadata({
+        title: "Currency Fundamental",
+        description: "Currency fundamental analysis heatmap displaying real-time market sentiment, economic indicators, and trading opportunities",
+        keywords: [
+            "currency fundamental",
+            "heatmap",
+            "market sentiment",
+            "economic indicators",
+            "currency pairs",
+        ],
+        path: "currency-fundamental",
     }),
 
     cotReport: generateMetadata({
@@ -108,9 +173,9 @@ export const commonMetadata = {
             "market trends",
             "institutional sentiment",
             "trader positions",
-            "futures data"
+            "futures data",
         ],
-        path: "/admin/cot-report",
+        path: "cot-report",
     }),
 
     retailSentiment: generateMetadata({
@@ -122,16 +187,35 @@ export const commonMetadata = {
             "market psychology",
             "retail positioning",
             "trading behavior",
-            "investor confidence"
+            "investor confidence",
         ],
-        path: "/admin/retail-sentiment",
+        path: "retail-sentiment",
     }),
 
     portfolioTracker: generateMetadata({
         title: "Portfolio Tracker",
         description: "Track, manage, and analyze your investment portfolio with real-time insights and performance metrics.",
-        keywords: ["portfolio tracker", "investment tracking", "portfolio management", "real-time performance", "investment insights"],
-        path: "/admin/portfolio-tracker",
+        keywords: [
+            "portfolio tracker",
+            "investment tracking",
+            "portfolio management",
+            "real-time performance",
+            "investment insights",
+        ],
+        path: "portfolio-tracker",
+    }),
+
+    education: generateMetadata({
+        title: "Education",
+        description: "Explore courses, tutorials, and resources to enhance your knowledge and skills.",
+        keywords: [
+            "online education",
+            "learning resources",
+            "courses",
+            "tutorials",
+            "skill development",
+        ],
+        path: "education",
     }),
 };
 

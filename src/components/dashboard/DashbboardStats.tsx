@@ -1,5 +1,5 @@
 import AreaChart from "./AreaChart";
-import Section from "./Section";
+import Section from "../layout/Section";
 import styles from './DashbboardStats.module.scss';
 import WebsiteTrafficStats from "./WebsiteTrafficStats";
 

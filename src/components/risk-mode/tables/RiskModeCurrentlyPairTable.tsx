@@ -1,7 +1,4 @@
-import Table from '@/components/base-table/Heatmap/Table';
-import Tr from '@/components/base-table/Heatmap/Tr';
-import Tbody from '@/components/base-table/Heatmap/Tbody';
-import Td from '@/components/base-table/Heatmap/Td';
+import { Table, Tr, Tbody, Td } from '@/components/base-table';
 
 interface RowData {
     currentlyPair: string;

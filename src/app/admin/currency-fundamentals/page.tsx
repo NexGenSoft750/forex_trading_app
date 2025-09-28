@@ -1,6 +1,6 @@
 "use client"
 
-import Section from '@/components/dashboard/Section';
+import Section from '@/components/layout/Section';
 import styles from './CurrencyFundamentalsPage.module.scss';
 import CurrencyTab from '@/components/currency-fundamental/CurrencyTab';
 import { useState } from 'react';

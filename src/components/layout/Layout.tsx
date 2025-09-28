@@ -11,6 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
     const title = usePageTitle();
 
+    // When the current page is "Education", isEducationPage is used to remove padding from the <main> layout.
+    const isEducationPage = title === 'Education';
+
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
@@ -47,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             {isSidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                         </button>
                     </Header>
-                    <main className={styles["dashboard__content"]}>
+                    <main className={isEducationPage ? '' : styles["dashboard__content"]}>
                         {children}
                     </main>
                 </div>

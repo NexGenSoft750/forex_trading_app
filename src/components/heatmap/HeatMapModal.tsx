@@ -1,5 +1,5 @@
 import styles from "./HeatMapModal.module.scss";
-import Row from "./Row";
+import { Row, Col } from "@/components/layout";
 import SentimentOverview from "./SentimentOverview";
 import { FiX } from 'react-icons/fi';
 
@@ -154,7 +154,7 @@ export default function HeatMapModal({ onClose }: HeatMapModalProps) {
                             backgroundColor: "#C9DAF9",
                         }}
                     >
-                        Forex Fundamental Edge
+                        <Col>Forex Fundamental Edge</Col>
                     </Row>
                     <Row
                         style={{
@@ -162,7 +162,7 @@ export default function HeatMapModal({ onClose }: HeatMapModalProps) {
                             backgroundColor: "#5D94F9",
                         }}
                     >
-                        USDCAD
+                        <Col>USDCAD</Col>
                     </Row>
                     <Row
                         style={{
@@ -171,7 +171,7 @@ export default function HeatMapModal({ onClose }: HeatMapModalProps) {
                             backgroundColor: "#12AD2B",
                         }}
                     >
-                        Bullish
+                        <Col>Bullish</Col>
                     </Row>
                     <SentimentOverview />
                     <div style={txt({ marginTop: 10 })}>

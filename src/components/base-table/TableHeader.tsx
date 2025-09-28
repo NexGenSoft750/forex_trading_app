@@ -1,4 +1,5 @@
-import Row from "../heatmap/Row";
+import Col from "../layout/Col";
+import Row from "../layout/Row";
 
 type TableHeaderProps = {
     color?: string;
@@ -18,7 +19,7 @@ export default function TableHeader({ color = '#ffffff', bgColor = '#000000', he
                     }
                 }
             >
-                {heading}
+                <Col>{heading}</Col>
             </Row>
         </>
     );

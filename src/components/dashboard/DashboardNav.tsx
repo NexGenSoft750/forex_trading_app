@@ -4,13 +4,14 @@ import Link from "next/link";
 import styles from "./DashboardNav.module.scss";
 import RightArrow from "./RightArrow";
 import { usePathname } from "next/navigation";
-import NAV_ITEMS from "@/lib/navItems";
+import SORTED_NAV_ITEMS from "@/lib/navItems";
+import { getFullPath } from "@/helper/path";
 
 export default function DashboardNav() {
   const currentPath = usePathname();
 
-  const getActiveLinkClass = (linkPath: string): string =>
-    currentPath === linkPath
+  const getActiveLinkClass = (fullPath: string): string =>
+    currentPath === fullPath
       ? [
         styles["dashboard-nav__wrapper--active"],
         styles["dashboard-nav__item--active"]
@@ -20,19 +21,23 @@ export default function DashboardNav() {
   return (
     <nav className={styles["dashboard-nav"]}>
       <ul className={styles["dashboard-nav__container"]}>
-        {NAV_ITEMS.map(({ key, label, href }) => (
-          <div key={key} className={`${styles["dashboard-nav__wrapper"]} ${getActiveLinkClass(href)}`}>
-            <li className={`${styles["dashboard-nav__item"]} ${getActiveLinkClass(href)}`}>
-              <Link
-                className={styles["dashboard-nav__link"]}
-                href={href}
-              >
-                {label}
-              </Link>
-              <RightArrow />
-            </li>
-          </div>
-        ))}
+        {SORTED_NAV_ITEMS.map(({ key, label, href }) => {
+          const fullPath = getFullPath(href);
+
+          return (
+            <div key={key} className={`${styles["dashboard-nav__wrapper"]} ${getActiveLinkClass(fullPath)}`}>
+              <li className={`${styles["dashboard-nav__item"]} ${getActiveLinkClass(fullPath)}`}>
+                <Link
+                  className={styles["dashboard-nav__link"]}
+                  href={fullPath}
+                >
+                  {label}
+                </Link>
+                <RightArrow />
+              </li>
+            </div>
+          );
+        })}
       </ul>
     </nav>
   );

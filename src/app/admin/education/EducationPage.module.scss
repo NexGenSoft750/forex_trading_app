@@ -1,0 +1,31 @@
+.pageContainer {
+    display: flex;
+    font-size: 1.55rem;
+
+    .aside {
+        width: 35%;
+        background-color: #F8FAFC;
+        border-right: 1px solid rgba(202, 206, 214, 0.792);
+        padding-top: 2.5rem;
+
+        &__educationCenterLink {
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        &__nav {
+            padding: 3rem;
+            padding-right: 2.5rem;
+
+            .aside__list {
+                list-style: none;
+            }
+        }
+    }
+
+    .contentSection {
+        width: 65%;
+    }
+}

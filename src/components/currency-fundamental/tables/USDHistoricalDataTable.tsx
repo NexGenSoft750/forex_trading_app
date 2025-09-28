@@ -1,9 +1,4 @@
-import Table from "@/components/base-table/Heatmap/Table";
-import Tbody from "@/components/base-table/Heatmap/Tbody";
-import Td from "@/components/base-table/Heatmap/Td";
-import Th from "@/components/base-table/Heatmap/Th";
-import Thead from "@/components/base-table/Heatmap/Thead";
-import Tr from "@/components/base-table/Heatmap/Tr";
+import { Table, Tbody, Td, Th, Thead, Tr } from "@/components/base-table";
 
 export default function USDHistoricalDataTable() {
     return (

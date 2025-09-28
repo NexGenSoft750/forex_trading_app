@@ -3,6 +3,8 @@
 import { FiX } from 'react-icons/fi';
 import styles from './Aside.module.scss';
 import DashboardNav from './DashboardNav';
+import Link from 'next/link';
+import { getBasePath } from '@/helper/path';
 
 interface AsideProps {
     onClose?: () => void;
@@ -21,7 +23,7 @@ export default function Aside({ onClose }: AsideProps) {
                     <FiX size={24} />
                 </button>
 
-                <div className={styles["sidebar__logo-wrapper"]}>
+                <Link href={getBasePath()} className={styles["sidebar__logo-wrapper"]}>
                     {/* <Image
                             src="/images/dashboard/profile.svg"
                             alt="Notification Icon"
@@ -29,7 +31,7 @@ export default function Aside({ onClose }: AsideProps) {
                             fill
                         /> */}
                     Logo
-                </div>
+                </Link>
                 <DashboardNav />
             </aside>
         </>

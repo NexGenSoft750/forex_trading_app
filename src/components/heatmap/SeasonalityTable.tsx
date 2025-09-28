@@ -1,7 +1,4 @@
-import Table from "../base-table/Heatmap/Table";
-import Td from "../base-table/Heatmap/Td";
-import Tbody from "../base-table/Heatmap/Tbody";
-import Tr from "../base-table/Heatmap/Tr";
+import { Table, Td, Tbody, Tr } from "@/components/base-table";
 
 export default function SeasonalityTable() {
     return (

@@ -1,9 +1,4 @@
-import Table from '../base-table/Heatmap/Table';
-import Tbody from '../base-table/Heatmap/Tbody';
-import Td from '../base-table/Heatmap/Td';
-import Th from '../base-table/Heatmap/Th';
-import Thead from '../base-table/Heatmap/Thead';
-import Tr from '../base-table/Heatmap/Tr';
+import { Table, Tbody, Td, Th, Thead, Tr } from '@/components/base-table';
 import styles from './COTTable.module.scss';
 
 export default function COTTable() {

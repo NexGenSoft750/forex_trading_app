@@ -1,9 +1,4 @@
-import Table from "../base-table/Heatmap/Table";
-import Thead from "../base-table/Heatmap/Thead";
-import Tbody from "../base-table/Heatmap/Tbody";
-import Th from "../base-table/Heatmap/Th";
-import Tr from "../base-table/Heatmap/Tr";
-import Td from "../base-table/Heatmap/Td";
+import { Table, Thead, Tbody, Th, Tr, Td } from "@/components/base-table";
 
 export default function NetScoreTable() {
     return (
