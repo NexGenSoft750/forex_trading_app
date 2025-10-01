@@ -2,7 +2,11 @@ import styles from './RiskMode.module.scss';
 import RiskModeCurrentlyPairTable from '@/components/risk-mode/tables/RiskModeCurrentlyPairTable';
 import GuageChart from '@/components/chart/GuageChart';
 import RiskModeSummaryTable from '@/components/risk-mode/tables/RiskModeSummaryTable';
+
+import TrendAlignmentScore from '@/components/chart/TrendAlignmentScore';
+
 import TextPanel from '@/components/ui/TextPanel';
+
 
 export default function RiskModePage() {
     return (
@@ -24,6 +28,9 @@ export default function RiskModePage() {
                     </div>
                 </div>
                 <div>
+                    <div className={styles.trendAlignmentContainer}>
+                        <TrendAlignmentScore />
+                    </div>
                     <RiskModeCurrentlyPairTable />
                     <TextPanel light>
                         <h1>Risk On / Off</h1>

@@ -10,6 +10,9 @@ import COTPositionsCharts from '@/components/currency-fundamental/charts/cot-cha
 import USDSeasonalReturns from '@/components/currency-fundamental/USDSeasonalReturns';
 import USDSeasonalReturnsChart from '@/components/currency-fundamental/charts/USDSeasonalReturnsChart';
 import NonComLongShortChart from '@/components/cot-data-analysis/tables/charts/NonComLongShortChart';
+import WeeklyNetChangeChart from '@/components/currency-fundamental/charts/WeeklyNetChangeChart';
+import SeasonalTrendsMarchChart from '@/components/currency-fundamental/charts/SeasonalTrendsMarchChart';
+import USDCADSeasonalTrigger from '@/components/currency-fundamental/charts/USDCADSeasonalTrigger';
 
 export default function COTReportPage() {
     return (
@@ -52,10 +55,13 @@ export default function COTReportPage() {
                 </div>
                 <div className={styles['currencyPairsContainer__chart']}>
                     <USDSeasonalReturnsChart chartHeading='Weekly Change Net Non Commercial Positios' />
-                    {/* <NonComLongShortChart chartHeading='Non Com Long % vs Short %' /> */}
+                    <WeeklyNetChangeChart chartHeading='Weekly Non Com Net Change vs Com-Net Change' />
+                    <NonComLongShortChart />
                 </div>
             </div>
             <COTWeeklyChangeReportTable />
+            <SeasonalTrendsMarchChart chartHeading='Seasonal Trends March' />
+            <USDCADSeasonalTrigger />
         </>
     );
 }

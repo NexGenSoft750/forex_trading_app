@@ -1,76 +1,38 @@
 "use client";
 
 import styles from "./PortfolioLineChart.module.scss";
-import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from "recharts";
-
-export const data = [
-  { day: 1, value: 10000 },
-  { day: 2, value: 10800 },
-  { day: 2.5, value: 11100 },
-  { day: 3, value: 14000 },
-];
 
 export default function PortfolioLineChart() {
   return (
     <div className={styles['line-chart-container']}>
+      <div className={styles['line-chart-box']}>
+        <div className={styles.chartArea}>
+          <div className={styles.yAxis}>
+            <div className={styles.yTick}>$100,000.00</div>
+            <div className={styles.yTick}>$80,000.00</div>
+            <div className={styles.yTick}>$60,000.00</div>
+            <div className={styles.yTick}>$40,000.00</div>
+            <div className={styles.yTick}>$20,000.00</div>
+          </div>
+          <div className={styles.plotArea}>
+            <div className={styles.gridLines}>
+              <div className={styles.horizontalLine}></div>
+              <div className={styles.horizontalLine}></div>
+              <div className={styles.horizontalLine}></div>
+              <div className={styles.horizontalLine}></div>
+              <div className={styles.horizontalLine}></div>
+            </div>
+            <div className={styles.verticalLine}></div>
+          </div>
+          <div className={styles.xAxis}>
+            <div className={styles.xTick}>6/8/2025</div>
+            <div className={styles.xTick}>9/9/2025</div>
+          </div>
+        </div>
+      </div>
       <h2 className={styles.heading}>
-        Comulative P/L vs. Date
+        Line Chart
       </h2>
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          data={data}
-          margin={{ top: 20, right: 30, left: 30, bottom: 50 }}
-        >
-          <CartesianGrid stroke="#e0e0e0" />
-          <XAxis
-            dataKey="day"
-            type="number"
-            domain={[1, 4]}
-            tick={{ fill: "#000000", fontSize: 12 }}
-            axisLine={true}
-            tickLine={true}
-            label={{
-              value: "Date",
-              position: "insideBottom",
-              offset: -10,
-              style: {
-                fill: "#000000",
-                fontSize: "1.4rem",
-                fontWeight: 500,
-                margin: 0,
-                letterSpacing: "1px",
-              },
-            }}
-          />
-          <YAxis
-            tick={{ fill: "#000000", fontSize: 12 }}
-            label={{
-              value: "Cumulative P/L",
-              angle: -90,
-              position: "insideMiddle",
-              dx: -52,
-              style: {
-                fill: "#000000",
-                fontSize: "1.6rem",
-                fontWeight: 500,
-                margin: 0,
-                letterSpacing: "1px",
-              },
-            }}
-            domain={[0, 15000]}
-            ticks={[0, 5000, 10000, 15000]}
-            tickFormatter={(v) => `$${v.toLocaleString()}.00`}
-          />
-          <Tooltip formatter={(v) => `$${v}`} />
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="green"
-            dot={false}
-            strokeWidth={2}
-          />
-        </LineChart>
-      </ResponsiveContainer>
     </div>
   )
-}   
+}
