@@ -27,8 +27,6 @@ export default function USDSeasonalReturnsChart({ chartHeading }: { chartHeading
     const chartHeight = 350;
     const chartWidth = 1000;
 
-    const innerHeight = chartHeight * 0.6;
-    const innerTop = (chartHeight - innerHeight) / 2;
     const range = maxValue - minValue;
     const steps = 5;
 

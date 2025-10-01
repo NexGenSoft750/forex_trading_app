@@ -32,7 +32,6 @@ export default function WeeklyNetChangeChart({ chartHeading }: { chartHeading: s
     const chartHeight = 400;
     const chartWidth = 1400;
 
-    const innerHeight = chartHeight * 0.7;
     const range = maxValue - minValue;
     const steps = 4;
 

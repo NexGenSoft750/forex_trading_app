@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import styles from './scoreBoard.module.scss';
 import Tab from '@/components/ui/Tab';
 import Tabs from '@/components/ui/Tabs';
 

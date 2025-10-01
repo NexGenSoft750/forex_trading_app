@@ -25,7 +25,6 @@ export default function TrendAlignmentScore() {
     const maxValue = 8.0;
     const minValue = -6.0;
     const totalRange = maxValue - minValue;
-    const chartHeight = 480;
 
     const gridValues = [6.0, 4.0, 2.0, 0.0, -2.0, -4.0, -6.0];
 
@@ -113,7 +112,7 @@ export default function TrendAlignmentScore() {
 
             <div className={styles.chartContainer}>
                 <div className={styles.yAxis}>
-                    {gridValues.map((value, index) => (
+                    {gridValues.map((value) => (
                         <div
                             key={value}
                             className={styles.yAxisLabel}
@@ -134,7 +133,7 @@ export default function TrendAlignmentScore() {
                     ))}
 
                     <div className={styles.barsContainer}>
-                        {trendData.map((data, index) => (
+                        {trendData.map((data) => (
                             <div key={data.currency} className={styles.currencyGroup}>
                                 <div className={styles.barsGroup}>
                                     <div className={styles.barContainer}>

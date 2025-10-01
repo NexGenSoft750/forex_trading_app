@@ -18,14 +18,10 @@ $colors: (
     htf: #5FB85F
 );
 
-@function color($name) {
-    @return map-get($colors, $name);
-}
-
 .container {
     font-family: $font-family;
     padding: 20px;
-    background-color: color(white);
+    background-color: map.get($colors, white);
     width: 100%;
     border: 2px solid rgb(202, 199, 199);
     border-radius: 8px;
@@ -37,7 +33,7 @@ $colors: (
     margin-bottom: 24px;
     font-size: 20px;
     font-weight: 600;
-    color: color(gray-900);
+    color: map.get($colors, gray-900);
     margin: 0 0 24px 0;
 }
 
@@ -58,25 +54,25 @@ $colors: (
             border-radius: 2px;
 
             &--ultf {
-                background-color: color(ultf);
+                background-color: map.get($colors, ultf);
             }
 
             &--ltf {
-                background-color: color(ltf);
+                background-color: map.get($colors, ltf);
             }
 
             &--mtf {
-                background-color: color(mtf);
+                background-color: map.get($colors, mtf);
             }
 
             &--htf {
-                background-color: color(htf);
+                background-color: map.get($colors, htf);
             }
         }
 
         &Label {
             font-size: 13px;
-            color: color(gray-700);
+            color: map.get($colors, gray-700);
             font-weight: 500;
         }
     }
@@ -85,7 +81,7 @@ $colors: (
 .chartContainer {
     display: flex;
     position: relative;
-    background-color: color(white);
+    background-color: map.get($colors, white);
 }
 
 .yAxis {
@@ -99,7 +95,7 @@ $colors: (
         right: 8px;
         transform: translateY(-50%);
         font-size: 11px;
-        color: color(gray-500);
+        color: map.get($colors, gray-500);
         font-weight: 400;
     }
 }
@@ -108,7 +104,7 @@ $colors: (
     flex: 1;
     height: $chart-height;
     position: relative;
-    background-color: color(white);
+    background-color: map.get($colors, white);
 }
 
 .gridLine {
@@ -116,11 +112,11 @@ $colors: (
     left: 0;
     right: 0;
     height: 1px;
-    background-color: color(gray-200);
+    background-color: map.get($colors, gray-200);
     z-index: 1;
 
     &--zero {
-        background-color: color(gray-700);
+        background-color: map.get($colors, gray-700);
         z-index: 2;
     }
 }
@@ -145,7 +141,7 @@ $colors: (
         bottom: -28px;
         font-size: 12px;
         font-weight: 500;
-        color: color(gray-700);
+        color: map.get($colors, gray-700);
         text-align: center;
         width: 100%;
     }
@@ -175,19 +171,19 @@ $colors: (
     z-index: 3;
 
     &--ultf {
-        background-color: color(ultf);
+        background-color: map.get($colors, ultf);
     }
 
     &--ltf {
-        background-color: color(ltf);
+        background-color: map.get($colors, ltf);
     }
 
     &--mtf {
-        background-color: color(mtf);
+        background-color: map.get($colors, mtf);
     }
 
     &--htf {
-        background-color: color(htf);
+        background-color: map.get($colors, htf);
     }
 }
 
@@ -197,7 +193,7 @@ $colors: (
     text-align: center;
     font-size: 10px;
     font-weight: 500;
-    color: color(gray-900);
+    color: map.get($colors, gray-900);
     white-space: nowrap;
 
     &--positive {

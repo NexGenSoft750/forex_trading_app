@@ -1,10 +1,9 @@
-import styles from './NoDataFoundPanel.module.scss';
 import CurrencyPanelSection from "../CurrencyPanelSection";
 
 export default function NoDataFoundPanel() {
     return (
         <>
-            <CurrencyPanelSection 
+            <CurrencyPanelSection
                 panelHeading="No Data Found!"
             >
                 <div></div>

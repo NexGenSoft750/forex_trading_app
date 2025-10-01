@@ -1,5 +1,4 @@
 import { Table, Tbody, Td, Th, Thead, Tr } from '@/components/base-table';
-import styles from './COTTable.module.scss';
 
 export default function COTTable() {
     return (

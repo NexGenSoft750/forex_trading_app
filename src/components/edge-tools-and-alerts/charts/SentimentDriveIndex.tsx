@@ -24,14 +24,17 @@ export default function SentimentDriveIndex() {
         zeroPosition: 60
     };
 
-    const calculateBarHeight = (value: any) => {
+    const calculateBarHeight = (value: number | null) => {
+        if (value === null) {
+            return 0;
+        }
         const absValue = Math.abs(value);
         return (absValue / chartScale.range) * 100;
     };
 
     // Function to calculate bar position
-    const getBarPosition = (value: any) => {
-        if (value > 0) {
+    const getBarPosition = (value: number | null) => {
+        if (value !== null && value > 0) {
             return {
                 position: 'bottom',
                 offset: `${100 - chartScale.zeroPosition}%`

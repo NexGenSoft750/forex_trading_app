@@ -7,13 +7,11 @@ type labels = Array<string>;
 type GuageChartProps = {
     style: React.CSSProperties;
     indicatorStyle: React.CSSProperties;
-    labels?: labels;
 };
 
 export default function GuageChart({
     style,
     indicatorStyle,
-    labels = ["SELL", "Neutral", "BUY"],
 }: GuageChartProps) {
     return (
         <>
