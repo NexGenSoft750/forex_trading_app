@@ -56,7 +56,7 @@ export default function COTReportPage() {
                 <div className={styles['currencyPairsContainer__chart']}>
                     <USDSeasonalReturnsChart chartHeading='Weekly Change Net Non Commercial Positios' />
                     <WeeklyNetChangeChart chartHeading='Weekly Non Com Net Change vs Com-Net Change' />
-                    {/* <NonComLongShortChart chartHeading='Non Com Long % vs Short %' /> */}
+                    <NonComLongShortChart />
                 </div>
             </div>
             <COTWeeklyChangeReportTable />

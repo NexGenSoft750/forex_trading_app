@@ -1,108 +1,98 @@
 .container {
-    width: 100%;
-    padding: 20px;
-    background-color: #000;
+    background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-}
-
-.title {
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-.scrollWrapper {
-    overflow-x: auto;
-    width: 100%;
-}
-
-.chart {
-    position: relative;
-    background-color: #000;
-    min-width: 1000px;
-}
-
-.legend {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .legend {
     display: flex;
-    gap: 20px;
-    z-index: 10;
-}
-
-.legendItem {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.8rem;
+  
+    &Long,
+    &Short {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  
+    &Long {
+      background-color: #2563eb;
+    }
+    &Short {
+      background-color: #dc2626;
+    }
+  }
+  
+  .chart {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 14px;
-}
+    height: 32px;
+    gap: 1rem;
 
-.legendColor {
-    width: 20px;
-    height: 15px;
-}
-
-.longColor {
-    background-color: #2563eb;
-    /* Blue */
-}
-
-.shortColor {
-    background-color: #dc2626;
-    /* Red */
-}
-
-.gridLine {
-    position: absolute;
-    width: 1px;
-    background-color: #333;
-    z-index: 1;
-}
-
-.xAxisLabel {
-    position: absolute;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    width: 20px;
-}
-
-.instrumentLabel {
-    position: absolute;
-    color: white;
-    font-size: 12px;
+  }
+  
+  .label {
+    width: 13rem;
+    text-align: right;
+    font-size: 0.9rem;
     font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .barContainer {
+    flex: 1;
+    height: 1.4rem;
+    display: flex;
+    position: relative;
+  }
+  
+  .long,
+  .short {
+    height: 100%;
     display: flex;
     align-items: center;
-    height: 16px;
-}
-
-.bar {
-    position: absolute;
-    z-index: 2;
-}
-
-.longBar {
+    justify-content: center;
+  
+    span {
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+  
+  .long {
     background-color: #2563eb;
-    /* Blue */
-}
-
-.shortBar {
+  }
+  
+  .short {
     background-color: #dc2626;
-    /* Red */
-}
-
-.valueLabel {
-    position: absolute;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    z-index: 3;
-    width: 20px;
-}
+  }
+  
+  .xAxis {
+    max-width: 900px;
+    margin: 0.8rem auto 0;
+    padding-left: 14rem;
+  
+    div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+  

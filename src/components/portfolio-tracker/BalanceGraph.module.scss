@@ -1,0 +1,145 @@
+.balance-graph-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.balance-graph-box {
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  padding: 20px;
+  height: 400px;
+  position: relative;
+
+  .title {
+    color: #000000;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+  }
+
+  .chart-area {
+    position: relative;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .y-axis {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+    z-index: 2;
+
+    .y-tick {
+      font-size: 1.4rem;
+      color: #000000;
+      text-align: right;
+      padding-right: 15px;
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+  }
+
+  .plot-area {
+    margin-left: 100px;
+    height: 200px;
+    position: relative;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #ffffff;
+
+    .grid-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1;
+
+      .horizontal-line {
+        height: 1px;
+        background-color: #ffb3b3; // Light pink color as shown in image
+        width: 100%;
+      }
+    }
+
+    .line-chart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+
+  .x-axis {
+    margin-top: 2rem;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .x-tick {
+      font-size: 1.2rem;
+      color: #000000;
+      transform: rotate(90deg);
+      transform-origin: center;
+      white-space: nowrap;
+      font-family: sans-serif;
+      font-weight: normal;
+      height: 90px;
+      width: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .balance-graph-box {
+    height: 350px;
+    padding: 15px;
+
+    .chart-area {
+      height: 280px;
+    }
+
+    .y-axis {
+      width: 80px;
+
+      .y-tick {
+        font-size: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    .plot-area {
+      margin-left: 80px;
+    }
+
+    .x-axis {
+      margin-left: 80px;
+
+      .x-tick {
+        font-size: 8px;
+        width: 80px;
+      }
+    }
+  }
+}
