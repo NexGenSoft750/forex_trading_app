@@ -17,7 +17,6 @@ export default function RiskModePage() {
                     <SectionHeader>Risk Mode</SectionHeader>
                     <div className={styles.guageChartWrapper}>
                         <GuageChart
-                            labels={["OFF", "Neutral", "ON"]}
                             style={{ width: "25rem" }}
                             indicatorStyle={{ width: "10rem", height: "10rem" }}
                         />
@@ -34,46 +33,16 @@ export default function RiskModePage() {
                         <div className={styles.chartRow}>
                             <div className={styles.chartWrapper}>
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />
 
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />
 
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
-                                    style={{ width: "18rem" }}
-                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
-                                />
-                            </div>
-                            <Row style={{ fontSize: "2rem", fontWeight: 500, border: "1px solid #E5E7EB" }}>
-                                <Col>USD</Col>
-                                <Col>EUR</Col>
-                                <Col>GPB</Col>
-                            </Row>
-                        </div>
-
-                        <div className={styles.chartRow}>
-                            <div className={styles.chartWrapper}>
-                                <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
-                                    style={{ width: "18rem" }}
-                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
-                                />
-
-                                <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
-                                    style={{ width: "18rem" }}
-                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
-                                />
-
-                                <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />
@@ -88,19 +57,40 @@ export default function RiskModePage() {
                         <div className={styles.chartRow}>
                             <div className={styles.chartWrapper}>
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />
 
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />
 
                                 <GuageChart
-                                    labels={["OFF", "Neutral", "ON"]}
+                                    style={{ width: "18rem" }}
+                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
+                                />
+                            </div>
+                            <Row style={{ fontSize: "2rem", fontWeight: 500, border: "1px solid #E5E7EB" }}>
+                                <Col>USD</Col>
+                                <Col>EUR</Col>
+                                <Col>GPB</Col>
+                            </Row>
+                        </div>
+
+                        <div className={styles.chartRow}>
+                            <div className={styles.chartWrapper}>
+                                <GuageChart
+                                    style={{ width: "18rem" }}
+                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
+                                />
+
+                                <GuageChart
+                                    style={{ width: "18rem" }}
+                                    indicatorStyle={{ width: "7rem", height: "7rem" }}
+                                />
+
+                                <GuageChart
                                     style={{ width: "18rem" }}
                                     indicatorStyle={{ width: "7rem", height: "7rem" }}
                                 />

@@ -2,7 +2,7 @@
 
 import styles from "./BalanceGraph.module.scss";
 
-export default function BalanceGraph() {
+export default function BalanceGraph({ chartHeading }: { chartHeading: string }) {
     // Sample data points based on the new image - jagged, angular pattern
     const dataPoints = [
         { x: 0, y: 28000 },
@@ -250,7 +250,7 @@ export default function BalanceGraph() {
     return (
         <div className={styles['balance-graph-container']}>
             <div className={styles['balance-graph-box']}>
-                <h2 className={styles.title}>Balance Graph</h2>
+                <h2 className={styles.title}>{chartHeading}</h2>
                 <div className={styles['chart-area']}>
                     <div className={styles['y-axis']}>
                         <div className={styles['y-tick']}>37 000 00</div>

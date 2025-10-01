@@ -2,8 +2,6 @@ import Image from "next/image";
 import styles from "./GuageChart.module.scss";
 import GuageChartIndicator from "./GuageChartIndicator";
 
-type labels = Array<string>;
-
 type GuageChartProps = {
     style: React.CSSProperties;
     indicatorStyle: React.CSSProperties;
