@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@/styles/globals.scss";
 import { Poppins } from 'next/font/google';
 import Layout from "@/components/layout/Layout";
@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

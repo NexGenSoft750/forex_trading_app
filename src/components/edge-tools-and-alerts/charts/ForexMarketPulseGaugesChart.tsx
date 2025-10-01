@@ -7,21 +7,18 @@ const ForexMarketPulseGaugesChart = () => {
             <div className={styles.forexMarketPulseGaugesChart}>
                 <div className={styles.guageChartWrapper}>
                     <GuageChart
-                        labels={["USD Weak", "Neutral", "USD Strong"]}
                         style={{ width: "16rem" }}
                         indicatorStyle={{ width: "5.5rem", height: "5.5rem" }}
                     />
                 </div>
                 <div className={styles.guageChartWrapper}>
                     <GuageChart
-                        labels={["USD Weak", "Neutral", "USD Strong"]}
                         style={{ width: "16rem" }}
                         indicatorStyle={{ width: "5.5rem", height: "5.5rem" }}
                     />
                 </div>
                 <div className={styles.guageChartWrapper}>
                     <GuageChart
-                        labels={["USD Weak", "Neutral", "USD Strong"]}
                         style={{ width: "16rem" }}
                         indicatorStyle={{ width: "5.5rem", height: "5.5rem" }}
                     />
