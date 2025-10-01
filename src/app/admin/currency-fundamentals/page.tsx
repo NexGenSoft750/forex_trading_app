@@ -2,94 +2,74 @@
 
 import Section from '@/components/layout/Section';
 import styles from './CurrencyFundamentalsPage.module.scss';
-import CurrencyTab from '@/components/currency-fundamental/CurrencyTab';
+import Tab from '@/components/ui/Tab';
 import { useState } from 'react';
-import CurrencyTabPanel from '@/components/currency-fundamental/CurrencyTabPanel';
-import { TabName } from '@/types/TabName';
-const DEFAULT_ACTIVE_TAB = 'USD &';
+import TabPanel from '@/components/currency-fundamental/TabPanel';
+import Tabs from '@/components/ui/Tabs';
+const DEFAULT_ACTIVE_TAB = 'Admin Table 1';
 
 export default function CurrencyFundamentalsPage() {
-    const [activeTab, setActiveTab] = useState<TabName>(DEFAULT_ACTIVE_TAB);
+    const [activeTab, setActiveTab] = useState<string>(DEFAULT_ACTIVE_TAB);
 
-    const handleTabClick = (tabName: TabName) => {
+    const handleTabClick = (tabName: string) => {
         setActiveTab(tabName);
     };
 
     return (
         <Section>
             <div className={styles.currencyFundamentalsContainer}>
-                <div className={styles.currencyFundamentals__tabsContainer}>
-                    <CurrencyTab
+                <Tabs>
+                    <Tab
                         text="USD &"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "USD &"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="GBP"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "GBP"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="EUR"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "EUR"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="CAD"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "CAD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="AUD"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "AUD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="NZD"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "NZD"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
+                    <Tab
                         text="CHF"
-                        border="curve"
+                        border="rounded"
                         isActive={activeTab === "CHF"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
-                        text="USD"
-                        smallText="( Historical Data Basic Fundamentals )"
+                    <Tab
+                        text="JPY"
                         border="rounded"
-                        isActive={activeTab === "USD"}
+                        isActive={activeTab === "JPY"}
                         onClick={handleTabClick}
                     />
-                    <CurrencyTab
-                        text="Seasonality"
-                        border="rounded"
-                        isActive={activeTab === "Seasonality"}
-                        onClick={handleTabClick}
-                    />
-                    <CurrencyTab
-                        text="US Cot Data & Trends"
-                        smallText='( Weekly )'
-                        border="rounded"
-                        isActive={activeTab === "US Cot Data & Trends"}
-                        onClick={handleTabClick}
-                    />
-                    <CurrencyTab
-                        text="News"
-                        border="rounded"
-                        isActive={activeTab === "News"}
-                        onClick={handleTabClick}
-                    />
-                </div>
-                <CurrencyTabPanel tabName={activeTab} />
+                </Tabs>
+                <TabPanel tabName={activeTab} />
             </div>
-        </Section>
+        </Section >
     );
 }

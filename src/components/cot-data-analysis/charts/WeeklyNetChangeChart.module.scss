@@ -1,0 +1,129 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    margin-top: 1.2rem;
+}
+
+.chart {
+    position: relative;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.scrollWrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3rem;
+}
+
+.chart {
+    min-width: 1500px;
+}
+
+.legend {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+.legendColor {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.nonCommColor {
+    background-color: #34A853;
+}
+
+.comColor {
+    background-color: #FF8484;
+}
+
+.gridLine {
+    position: absolute;
+    left: 80px;
+    right: 0;
+    height: 2px;
+    background-color: #333;
+}
+
+.gridLabel {
+    position: absolute;
+    left: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.bar {
+    position: absolute;
+    border-radius: 3px;
+}
+
+.nonCommBar {
+    background-color: #34A853;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+}
+
+.comBar {
+    background-color: #FF8484;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -ms-border-radius: 0 0 4px 4px;
+    -o-border-radius: 0 0 4px 4px;
+}
+
+.valueLabel {
+    position: absolute;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.categoryLabel {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.zeroLine {
+    position: absolute;
+    left: 80px;
+    right: 0;
+    height: 2px;
+    background-color: #666;
+}

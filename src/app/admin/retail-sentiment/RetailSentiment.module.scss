@@ -1,0 +1,23 @@
+@use '@/styles/mixins' as *;
+
+.retailSentimentContainer {
+    display: flex;
+    gap: clamp(2rem, 3vw, 4rem);
+    margin: clamp(1rem, 2vw, 2rem) 0;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.tableSection {
+    width: 31%;
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.chartSection {
+    width: 100%;
+}

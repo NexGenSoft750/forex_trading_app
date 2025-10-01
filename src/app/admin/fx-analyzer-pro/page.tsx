@@ -142,28 +142,28 @@ const FxAnalyzerProPage = () => {
                     <div className={styles.fxAnalyzerPro__sentimentPanel}>
                         <Row
                             style={{
-                                fontSize: "3rem",
+                                fontSize: "2rem",
                                 backgroundColor: "#C9DAF9",
+                                padding: "0.5rem"
                             }}
                         >
                             <Col>Forex Fundamental Edge</Col>
                         </Row>
                         <Row
                             style={{
-                                fontSize: "2.2rem",
+                                fontSize: "2rem",
                                 backgroundColor: "#5D94F9",
                             }}
                         >
-                            <Col>USDCAD</Col>
+                            <Col>EURGBP</Col>
                         </Row>
                         <Row
                             style={{
-                                fontSize: "2.3rem",
-                                color: "#ffffff",
-                                backgroundColor: "#12AD2B",
+                                fontSize: "2rem",
+                                backgroundColor: "#FFFF00",
                             }}
                         >
-                            <Col>Bullish</Col>
+                            <Col>Neutral</Col>
                         </Row>
                         <SentimentOverview />
                         <div style={txt({ marginTop: 10, overflowX: "auto", })}>
@@ -426,7 +426,7 @@ const FxAnalyzerProPage = () => {
                                                     textAlign: 'center' as const,
                                                     color: 'black',
                                                     fontWeight: '500',
-                                                    borderBottom: '1px solid #e6eefc',
+                                                    border: '1px solid #d9e2f2',
                                                 })}>{h}</th>
                                             ))}
                                         </tr>
@@ -451,7 +451,7 @@ const FxAnalyzerProPage = () => {
                                                             style={txt({
                                                                 padding: "12px 12px",
                                                                 textAlign: "center",
-                                                                borderTop: "1px solid #eef3fb",
+                                                                border: '1px solid #d9e2f2',
                                                                 color,
                                                                 fontWeight: j < 3 ? 600 : "normal",
                                                                 fontSize: j > 2 ? "1.3rem" : "inherit",

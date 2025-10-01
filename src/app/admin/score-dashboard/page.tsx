@@ -1,26 +1,40 @@
-import styles from './scoreBoard.module.scss';
-import ScoreBoardFundamentalDataTable from '@/components/score-dashboard/tables/ScoreBoardFundamentalDataTable';
-import ScoreBoardMainTable from "@/components/score-dashboard/tables/ScoreBoardMainTable";
-import ScoreBoardMajorFundamentalTable from '@/components/score-dashboard/tables/ScoreBoardMajorFundamentalTable';
-import ScoreBoardMinorFundamentalTable from '@/components/score-dashboard/tables/ScoreBoardMinorFundamentalTable';
+"use client";
 
+import { useState } from 'react';
+import styles from './scoreBoard.module.scss';
+import Tab from '@/components/ui/Tab';
+import Tabs from '@/components/ui/Tabs';
+
+const DEFAULT_ACTIVE_TAB = 'USD &';
 export default function ScoreBoardPage() {
+    const [activeTab, setActiveTab] = useState<string>(DEFAULT_ACTIVE_TAB);
+
+    const handleTabClick = (tabName: string) => {
+        setActiveTab(tabName);
+    };
+
     return (
         <>
-            <div>
-                <ScoreBoardMainTable />
-                <div className={styles.tableContainer}>
-                    <div>
-                        <ScoreBoardFundamentalDataTable />
-                    </div>
-                    <div>
-                        <ScoreBoardMajorFundamentalTable />
-                    </div>
-                    <div>
-                        <ScoreBoardMinorFundamentalTable />
-                    </div>
-                </div>
-            </div>
+            <Tabs>
+                <Tab
+                    text="Admin Table 1"
+                    border="rounded"
+                    isActive={activeTab === "Admin Table 1"}
+                    onClick={handleTabClick}
+                />
+                <Tab
+                    text="Admin Table 2"
+                    border="rounded"
+                    isActive={activeTab === "Admin Table 2"}
+                    onClick={handleTabClick}
+                />
+                <Tab
+                    text="Admin Table 3"
+                    border="rounded"
+                    isActive={activeTab === "Admin Table 3"}
+                    onClick={handleTabClick}
+                />
+            </Tabs>
         </>
     );
 }

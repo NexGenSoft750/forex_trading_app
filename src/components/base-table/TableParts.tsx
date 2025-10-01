@@ -195,7 +195,7 @@ export function Th({
     const thStyle: React.CSSProperties & { [key: string]: string | number | undefined } = {
         ...style,
         color,
-        border: `3px solid ${borderColor}`,
+        border: `2px solid ${borderColor}`,
         ...(bgColor ? { backgroundColor: bgColor, ['--border-top-color']: bgColor } : {}),
     };
     return (
@@ -250,7 +250,7 @@ export function Td({
                 ...style,
                 color: color,
                 backgroundColor: bgColor,
-                border: `3px solid ${borderColor}`,
+                border: `2px solid ${borderColor}`,
             }}
             colSpan={colSpan}
             rowSpan={rowSpan}

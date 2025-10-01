@@ -74,6 +74,7 @@
     font-size: 1.5rem;
     color: #374151;
     vertical-align: middle;
+    text-align: center;
     border-right: 1px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;
 
@@ -122,21 +123,15 @@
 }
 
 .profitResult {
-    background: #d1fae5;
     color: #065f46;
-    border: 1px solid #a7f3d0;
 }
 
 .lossResult {
-    background: #fecaca;
     color: #991b1b;
-    border: 1px solid #fca5a5;
 }
 
 .openResult {
-    background: #fef3c7;
     color: #d97706;
-    border: 1px solid #fcd34d;
 }
 
 .commentText {

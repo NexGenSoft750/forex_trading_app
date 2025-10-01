@@ -178,6 +178,20 @@ export const commonMetadata = {
         path: "cot-report",
     }),
 
+    seasonalTrends: generateMetadata({
+        title: "Seasonal Trends",
+        description: "In-depth seasonal trends analysis showcasing recurring market patterns, historical cycles, and long-term seasonal tendencies across financial markets",
+        keywords: [
+            "seasonal trends",
+            "market cycles",
+            "historical patterns",
+            "seasonality analysis",
+            "financial markets",
+            "trading strategies",
+        ],
+        path: "seasonal-trends",
+    }),
+
     retailSentiment: generateMetadata({
         title: "Retail Sentiment",
         description: "Comprehensive retail sentiment data showing the behavior, positioning, and confidence levels of retail traders across major markets and asset classes.",
@@ -192,14 +206,14 @@ export const commonMetadata = {
         path: "retail-sentiment",
     }),
 
-    portfolioTracker: generateMetadata({
-        title: "Portfolio Tracker",
+    tradingJournal: generateMetadata({
+        title: "Trading Journal",
         description: "Track, manage, and analyze your investment portfolio with real-time insights and performance metrics.",
         keywords: [
             "portfolio tracker",
             "investment tracking",
             "portfolio management",
-            "real-time performance",
+            "Trading Journal",
             "investment insights",
         ],
         path: "portfolio-tracker",

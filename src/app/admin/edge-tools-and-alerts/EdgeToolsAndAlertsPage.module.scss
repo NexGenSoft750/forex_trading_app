@@ -1,8 +1,14 @@
 .charts {
     display: grid;
+    align-items: stretch;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     row-gap: 3rem;
+}
+
+.guageChart {
+    display: flex;
+    flex-direction: column;
 }
 
 .sectionContentWrapper {

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './page.module.scss';
+import styles from './ForexHeatmapPage.module.scss';
 import HeatMapBox from '@/components/heatmap/HeatMapBox';
 
 const heatmapData = [

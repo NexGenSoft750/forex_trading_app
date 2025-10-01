@@ -211,7 +211,7 @@ const TradingAlertsHistoryTable: React.FC = () => {
                             <td className={styles.dataCell}>{alert.tp1}</td>
                             <td className={styles.dataCell}>{alert.tp2}</td>
                             <td className={styles.dataCell}>
-                                <span className={`${styles.resultBadge} ${getResultClass(alert.result, alert.status)}`}>
+                                <span className={getResultClass(alert.result, alert.status)}>
                                     {formatResult(alert.result, alert.status)}
                                 </span>
                             </td>

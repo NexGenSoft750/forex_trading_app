@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./GuageChart.module.scss";
 import GuageChartIndicator from "./GuageChartIndicator";
 
-type labels =Array<string>;
+type labels = Array<string>;
 
 type GuageChartProps = {
     style: React.CSSProperties;
@@ -10,10 +10,10 @@ type GuageChartProps = {
     labels?: labels;
 };
 
-export default function GuageChart({ 
-    style, 
-    indicatorStyle, 
-    labels = ["SELL", "Neutral", "BUY"], 
+export default function GuageChart({
+    style,
+    indicatorStyle,
+    labels = ["SELL", "Neutral", "BUY"],
 }: GuageChartProps) {
     return (
         <>

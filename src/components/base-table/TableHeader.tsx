@@ -1,3 +1,4 @@
+import styles from './TableHeader.module.scss';
 import Col from "../layout/Col";
 import Row from "../layout/Row";
 
@@ -7,7 +8,7 @@ type TableHeaderProps = {
     heading: string;
 };
 
-export default function TableHeader({ color = '#ffffff', bgColor = '#000000', heading }: TableHeaderProps) {
+export default function TableHeader({ color = '#000000', bgColor = '#ffffff', heading }: TableHeaderProps) {
     return (
         <>
             <Row
@@ -18,6 +19,7 @@ export default function TableHeader({ color = '#ffffff', bgColor = '#000000', he
                         backgroundColor: bgColor
                     }
                 }
+                className={styles.tableHeader}
             >
                 <Col>{heading}</Col>
             </Row>

@@ -1,0 +1,18 @@
+@use '@/styles/mixins.scss' as *;
+
+.heatmap-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: clamp(2rem, 2.5vw, 4rem) clamp(1rem, 2vw, 3rem);
+
+    @include tablet {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    @include mobile {
+        gap: 1rem;
+        padding: 1rem;
+    }
+}

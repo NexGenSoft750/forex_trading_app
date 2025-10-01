@@ -3,14 +3,16 @@
 import { useState } from "react";
 import styles from "./HeatMapBox.module.scss";
 import HeatMapModal from "./HeatMapModal";
+import USDCADSeasonalModal from "../seasonal-trends/USDCADSeasonalModal";
 
 type HeatMapBoxProps = {
     bgColor?: string;
     text: string;
     textColor?: string;
+    modalType?: 'heatmap' | 'seasonal';
 }
 
-function HeatMapBox({ bgColor = "#12ad2b", text, textColor = 'white' }: HeatMapBoxProps) {
+function HeatMapBox({ bgColor = "#12ad2b", text, textColor = 'white', modalType = 'heatmap' }: HeatMapBoxProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleModalOpen = () => {
@@ -21,9 +23,13 @@ function HeatMapBox({ bgColor = "#12ad2b", text, textColor = 'white' }: HeatMapB
         setIsModalOpen(false);
     };
 
+    const modal = modalType === 'heatmap'
+        ? <HeatMapModal onClose={handleModalClose} />
+        : <USDCADSeasonalModal onClose={handleModalClose} />;
+
     return (
         <>
-            {isModalOpen && <HeatMapModal onClose={handleModalClose} />}
+            {isModalOpen && modal}
             <div
                 className={styles["heatmap-box"]}
                 style={{ backgroundColor: bgColor, color: textColor }}

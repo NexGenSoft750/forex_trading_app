@@ -86,6 +86,10 @@
 .dashboard__panel {
     width: 80%;
 
+    @include tablet {
+        width: 100%;
+    }
+
     .dashboard__content {
         display: flex;
         flex-direction: column;

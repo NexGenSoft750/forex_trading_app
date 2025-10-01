@@ -1,0 +1,98 @@
+.container {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.8rem;
+
+    &Long,
+    &Short {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &Long {
+        background-color: #2563eb;
+    }
+
+    &Short {
+        background-color: #dc2626;
+    }
+}
+
+.chart {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    gap: 1rem;
+
+}
+
+.label {
+    width: 13rem;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.barContainer {
+    flex: 1;
+    height: 1.4rem;
+    display: flex;
+    position: relative;
+}
+
+.long,
+.short {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+.long {
+    background-color: #2563eb;
+}
+
+.short {
+    background-color: #dc2626;
+}
+
+.xAxis {
+    max-width: 900px;
+    margin: 0.8rem auto 0;
+    padding-left: 14rem;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        color: white;
+    }
+}

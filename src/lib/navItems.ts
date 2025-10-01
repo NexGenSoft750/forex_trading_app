@@ -62,9 +62,9 @@ const NAV_ITEMS: NavItem[] = [
         order: 10
     },
     {
-        key: "portfolio-tracker",
+        key: "trading-journal",
         label: "Trading Journal",
-        href: "portfolio-tracker",
+        href: "trading-journal",
         order: 11
     },
     {

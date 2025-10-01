@@ -8,6 +8,7 @@ import ForexMarketPulseGaugesChart from '@/components/edge-tools-and-alerts/char
 import SectionHeader from '@/components/layout/SectionHeader';
 import { Row, Col } from '@/components/layout';
 import SectionHeaders from '@/components/layout/SectionHeaders';
+import SentimentDriveIndex from '@/components/edge-tools-and-alerts/charts/SentimentDriveIndex';
 
 const EdgeToolsAndAlertsPage = () => {
     const alerts = Array(4).fill(null);
@@ -20,7 +21,7 @@ const EdgeToolsAndAlertsPage = () => {
                     aria-label='Edge Tools & Alerts Charts Container'
                 >
                     <div
-                        className={styles.charts__chart}
+                        className={`${styles.charts__chart} ${styles.guageChart}`}
                         aria-label='Forex Market Pulse Guage Chart'
                     >
                         <SectionHeader>Forex Market Pulse</SectionHeader>
@@ -36,18 +37,21 @@ const EdgeToolsAndAlertsPage = () => {
                         aria-label='Direction Drive Index Chart'
                     >
                         <SectionHeader>Direction Drive Index</SectionHeader>
+                        <SentimentDriveIndex />
                     </div>
                     <div
                         className={styles.charts__chart}
                         aria-label='Sentiment Drive Index Chart'
                     >
                         <SectionHeader>Sentiment Drive Index</SectionHeader>
+                        <SentimentDriveIndex />
                     </div>
                     <div
                         className={styles.charts__chart}
                         aria-label='Sentiment Drive Index'
                     >
                         <SectionHeader>Sentiment Drive Index</SectionHeader>
+                        <SentimentDriveIndex />
                     </div>
                 </div>
             </Section >
